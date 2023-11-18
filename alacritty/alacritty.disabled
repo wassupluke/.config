@@ -1,0 +1,18 @@
+selection:
+  save_to_clipboard: true
+
+    #mouse:
+    #  url:
+    #    #launcher:
+    #      program: open
+    #    modifiers: Command
+
+      # scrolling:
+      #  history: 100000
+
+    #colors:
+    #  cursor: #e42022
+
+cursor:
+  style: Block
+  unfocused_hollow: true

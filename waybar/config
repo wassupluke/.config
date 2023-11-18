@@ -1,0 +1,128 @@
+[{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["battery", "network"],
+    "modules-right": ["clock"],
+    "layer": "top",
+    // Top modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "9": "",
+            "10": "",
+            "urgent": "",
+            "default": ""
+        }
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%\t{time}\t",
+        "format-charging": " {capacity}%\t",
+        "format-plugged": " {capacity}%\t",
+        "format-alt": "{icon} {capacity}%\t",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    "network": {
+    "format-wifi": "  {essid}\t",
+    "format-ethernet": "{ifname}  \t",
+    "format-ethernet": "{ifname}  \t",
+    "format-disconnected": " \t",
+    "max-length": 50,
+    "on-click": "alacritty -e 'nmtui'"
+    },
+
+    "network#2": {
+    "interface": "enp6s0",
+    "format": "{ifname}\t",
+    "format-ethernet": "{ipaddr}/{cidr}  \t",
+    "format-disconnected": "", //An empty format will hide the module.
+    "max-length": 50
+    },
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "  {:%a %d %b, %I:%M %p}"
+    },
+},
+
+{
+    "layer": "bottom", 
+    "position": "bottom",
+    "modules-left": ["tray", "mpris"],
+    "modules-center": ["cpu", "temperature", "memory"],
+    "modules-right": ["pulseaudio", "backlight"],
+    // Bottom modules configuration
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "cpu": {
+        "format": " {usage}%\t",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "  {used} GIB\t"
+    },
+
+    "temperature": {
+        "critical-threshold": 50,
+        "format": " {temperatureC}°C\t"
+    },
+
+    "mpris": {
+	"format": "{player_icon}  {artist} - {title}",
+	"format-paused": "{status_icon}  {artist} - {title}",
+	"player-icons": {
+                "default": "",
+                "spotifyd": "",
+                "spotify": ""
+	},
+	"status-icons": {
+                "paused": ""
+	},
+	"ignored-players": ["firefox"]
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+}]
