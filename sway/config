@@ -15,6 +15,13 @@ exec --no-startup-id nm-applet
 # Set my wallpaper
 output "*" bg /home/wassu/Downloads/foggy_forest.jpg fill
 
+# Screenshot all visible outputs to clipboard and Pictures
+bindsym Print exec grimshot copy screen && grimshot save screen
+# Screenshot only active window to clipboard and Pictures
+bindsym Shift+Print exec grimshot copy active && grimshot save active
+# Screenshot custom area to clipboard and Pictures
+bindsym Ctrl+Print exec grimshot copy area && grimshot save area
+
 exec swayidle -w \
 	timeout 180 'swaylock \
 			--screenshots \
