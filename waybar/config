@@ -14,7 +14,8 @@
         "format": "{icon}",
         "format-icons": {
             "1": "",
-            "2": "",
+            "2": "󰖟",
+	    "7": "󰍳",
             "9": "",
             "10": "",
             "urgent": "",
@@ -28,28 +29,28 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%\t{time}\t",
-        "format-charging": " {capacity}%\t",
-        "format-plugged": " {capacity}%\t",
-        "format-alt": "{icon} {capacity}%\t",
+        "format": "{icon} {capacity}%  {time}  ",
+        "format-charging": " {capacity}%  ",
+        "format-plugged": " {capacity}%  ",
+        "format-alt": "{icon} {capacity}%  ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
     },
 
     "network": {
-    "format-wifi": "  {essid}\t",
-    "format-ethernet": "{ifname}  \t",
-    "format-ethernet": "{ifname}  \t",
-    "format-disconnected": " \t",
+    "format-wifi": "  {essid}  ",
+    "format-ethernet": "{ifname}    ",
+    "format-ethernet": "{ifname}    ",
+    "format-disconnected": "   ",
     "max-length": 50,
     "on-click": "alacritty -e 'nmtui'"
     },
 
     "network#2": {
     "interface": "enp6s0",
-    "format": "{ifname}\t",
-    "format-ethernet": "{ipaddr}/{cidr}  \t",
+    "format": "{ifname}  ",
+    "format-ethernet": "{ipaddr}/{cidr}    ",
     "format-disconnected": "", //An empty format will hide the module.
     "max-length": 50
     },
@@ -64,7 +65,7 @@
     "layer": "bottom", 
     "position": "bottom",
     "modules-left": ["tray", "mpris"],
-    "modules-center": ["cpu", "temperature", "memory"],
+    "modules-center": ["cpu", "temperature", "memory", "disk"],
     "modules-right": ["pulseaudio", "backlight"],
     // Bottom modules configuration
     "tray": {
@@ -73,17 +74,21 @@
     },
 
     "cpu": {
-        "format": " {usage}%\t",
+        "format": " {usage}%  ",
         "tooltip": false
-    },
-
-    "memory": {
-        "format": "  {used} GIB\t"
     },
 
     "temperature": {
         "critical-threshold": 50,
-        "format": " {temperatureC}°C\t"
+        "format": " {temperatureC}°C  "
+    },
+
+    "memory": {
+        "format": "󰘚  {used}GiB  "
+    },
+
+    "disk": {
+    	"format": "  {free}"
     },
 
     "mpris": {
