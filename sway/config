@@ -205,6 +205,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Application - Workspace Assignments
 assign [class="Brave-browser"] $ws2
+assign [app_id="org.multimc.MultiMC"] $ws7
 assign [class="Minecraft*"] $ws7
 assign [class="discord"] $ws9
 assign [class="Spotify"] $ws10
