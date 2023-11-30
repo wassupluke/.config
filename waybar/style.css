@@ -13,12 +13,10 @@
   border-radius: 12px;
 }
 
-.modules-right > * > * {
-  padding: 0px 12px;
+.modules-right > * > *, .modules-left {
   font-weight: normal;
   color: #000;
   background-color: #E42022;
-  margin-left: 8px
 }
 
 .modules-center {
