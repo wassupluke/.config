@@ -1,0 +1,86 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  /* font-family: "Noto Sans", "Font Awesome"; */
+  font-family: "Iosevka Nerd Font";
+  font-size: 13px;
+  min-height: 0;
+}
+
+.modules-right, .modules-left, .modules-center {
+  margin: 4px;
+}
+
+.modules-right > * > *, .modules-left, .modules-center {
+  border-radius: 12px;
+}
+
+.modules-right > * > *, .modules-left {
+  font-weight: normal;
+  color: #000;
+  background-color: #E42022;
+}
+
+.modules-center {
+}
+
+/*#tray {
+  padding: 0px 12px;
+}*/
+
+window#waybar {
+  background-color: #090909;
+  color: #dcdcdc;
+  font-weight: bold;
+  border: solid 10px #090909;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #E42022;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.modules-left {
+  background-color: #E42022;
+}
+
+#window {
+  background-color: #191919;
+  border-radius: 12px;
+  padding: 0px 12px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#workspaces button {
+  font-weight: normal;
+  padding: 0 2px;
+  background: none;
+  border: none;
+  border-radius: 1000px;
+}
+
+#workspaces button.focused, #workspaces button.active {
+  background-color: lightgray;
+  color: #191919;
+  border: solid 2px #E42022;
+}
+
+#mpris {
+  padding: 0 6px;
+  font-weight: normal;
+}
+
+#mpris.spotifyd, #mpris.spotify {
+  background-color: #1DB954;
+  color: #191414;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 0px 12px;
+}
