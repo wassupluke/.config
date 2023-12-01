@@ -10,6 +10,7 @@ smart_borders on
 exec_always --no-startup-id /usr/bin/dunst
 # exec_always --no-startup-id mako
 exec_always --no-startup-id autotiling
+exec_always --no-startup-id ~/.config/sway/scripts/middleMouseClearPrimary.sh
 exec wl-paste -t text --watch clipman store --no-persist
 exec --no-startup-id nm-applet
 
@@ -155,7 +156,6 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
 
 # Disables touchpad on start
 input type:touchpad {
