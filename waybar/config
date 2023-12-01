@@ -1,10 +1,11 @@
 [{
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 29,
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["sway/workspaces"],
     "modules-center": ["battery", "network"],
-    "modules-right": ["clock"],
+    "modules-right": ["clock", "custom/powermenu"],
     
     // Top modules configuration
     "sway/workspaces": {
@@ -57,11 +58,18 @@
     "clock": {
         "format": "   {:%a %d %b, %I:%M %p} "
     },
+
+    "custom/powermenu": {
+    	"format": " 󰐥 ",
+	"on-click": "exec ~/.config/waybar/scripts/powermenu.sh",
+
+    },
 },
 
 {
     "layer": "bottom", 
     "position": "bottom",
+    "height": 25,
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["tray", "custom/updates", "mpris"],
     "modules-center": ["cpu", "temperature", "memory", "disk"],
@@ -71,6 +79,11 @@
     "tray": {
         // "icon-size": 21,
         "spacing": 10
+    },
+
+    "custom/updates": {
+    	"format": "{} ",
+	"exec": "~/.config/waybar/scripts/updates.sh",
     },
 
     "mpris": {
@@ -85,11 +98,6 @@
                 "paused": ""
 	},
 	"ignored-players": ["firefox"]
-    },
-
-    "custom/updates": {
-    	"format": "{} ",
-	"exec": "~/.config/waybar/scripts/updates.sh",
     },
 
     "cpu": {
@@ -116,7 +124,7 @@
         "format-bluetooth": " {icon} {volume}% {format_source}",
         "format-bluetooth-muted": "  {icon} {format_source}",
         "format-muted": "   {format_source} ",
-        "format-source": " {volume} %",
+        "format-source": " {volume} % ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
