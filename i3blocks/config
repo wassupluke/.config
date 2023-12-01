@@ -1,0 +1,43 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+#
+#     https://gitlab.com/wmwnuk/i3-rice/-/blob/main/nord-i3/.config/i3blocks/config
+
+
+# Global properties
+separator=false
+separator_block_width=7
+
+[calculator]
+command=echo "<span foreground='#ffffff' size='medium' rise='2pt'>🖩</span>"; if [ $button ] ; then galculator; fi
+markup=pango
+interval=1
+
+[documentation]
+website=https://vivien.github.io/i3blocks
+full_text=<span foreground='#E42022' background='#00000033' size='x-large'></span><span background='#E42022'><span foreground='#ffffff' size='medium' rise='2pt'>  Documentation </span></span><span background='#E42022' foreground='#00000033' size='x-large'></span>
+command=xdg-open "$website"
+markup=pango
+background=#5e81ac
+color=#D8DEE9
+
+[date]
+command=echo "<span foreground='#81A1C1' size='medium' rise='2pt'>📆</span> <span size='medium' rise='1pt'>$(date +"%Y-%m-%d")</span>"; if [ $button ] ; then opera https://calendar.google.com; fi
+markup=pango
+interval=1
+
+[time]
+command=echo "<span foreground='#E42022' background='#00000033' size='x-large'></span><span background='#E42022'> <span foreground='#ffffff' size='medium' rise='2pt'>⏱ $(date +"%H:%M:%S")</span> </span><span background='#E42022' foreground='#00000033' size='x-large'></span>"
+markup=pango
+background=#5e81ac
+color=#D8DEE9
+interval=1
+
+[rofi-powermenu]
+command=echo "<span foreground='#E42022' size='x-large'>⏻</span> "; if [ $button ]; then powermenu; fi
+markup=pango
+interval=1
