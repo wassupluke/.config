@@ -20,7 +20,7 @@ case $chosen in
 	$option1)
 		swaymsg exit;;
 	$option2)
-		systemctl suspend;;
+		exec systemctl suspend;;
 	$option3)
 		exec reboot;;
 	$option4)
