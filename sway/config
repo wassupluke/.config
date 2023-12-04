@@ -98,7 +98,7 @@ bindsym mod1+Tab workspace back_and_forth
 bindsym $mod+Shift+b bar mode toggle
 
 # lock
-bindsym $mod+Escape exec "swaylock \
+bindsym $mod+Escape exec swaylock \
 			--screenshots \
 			--clock \
 			--indicator \
@@ -107,12 +107,10 @@ bindsym $mod+Escape exec "swaylock \
 			--effect-blur 7x5 \
 			--effect-vignette 0.5:0.5 \
 			--ring-color e42022 \
-			--key-hl-color 880033 \
+			--key-hl-color 00000088 \
 			--line-color 00000000 \
 			--inside-color 00000088 \
-			--separator-color 00000000 \
-			--grace 5 \
-			--fade-in 5"
+			--separator-color 00000000
 
 # make galculator and Dolphin float
 for_window [app_id="galculator"] floating enable
