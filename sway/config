@@ -176,8 +176,10 @@ bindsym $mod+n exec swaymsg input type:touchpad events disabled
 bindsym $mod+m exec swaymsg input type:touchpad events enabled
 
 # increase / decrease brightness
-bindsym $mod+F6 exec --no-startup-id brillo -q -U 3 && $refresh_i3status
-bindsym $mod+F7 exec --no-startup-id brillo -q -A 3 && $refresh_i3status
+# bindsym $mod+F6 exec --no-startup-id brillo -q -U 3 && $refresh_i3status
+# bindsym $mod+F7 exec --no-startup-id brillo -q -A 3 && $refresh_i3status
+bindsym $mod+XF86MonBrightnessDown exec --no-startup-id brillo -q -U 3 && $refresh_i3status
+bindsym $mod+XF86MonBrightnessUp exec --no-startup-id brillo -q -A 3 && $refresh_i3status
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
