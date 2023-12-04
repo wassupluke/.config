@@ -1,12 +1,12 @@
 [{
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 29,
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["sway/workspaces"],
     "modules-center": ["battery", "network"],
-    "modules-right": ["clock"],
-    "layer": "top",
+    "modules-right": ["clock", "custom/powermenu"],
+    
     // Top modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -56,39 +56,34 @@
     },
 
     "clock": {
-        // "timezone": "America/New_York",
-        "format": "  {:%a %d %b, %I:%M %p}"
+        "format": "   {:%a %d %b, %I:%M %p} "
+    },
+
+    "custom/powermenu": {
+    	"format": " 󰐥 ",
+	"on-click": "exec ~/.config/waybar/scripts/powermenu.sh",
+
     },
 },
 
 {
     "layer": "bottom", 
     "position": "bottom",
-    "modules-left": ["tray", "mpris"],
+    "height": 25,
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["tray", "custom/updates", "mpris"],
     "modules-center": ["cpu", "temperature", "memory", "disk"],
     "modules-right": ["pulseaudio", "backlight"],
+
     // Bottom modules configuration
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
 
-    "cpu": {
-        "format": " {usage}%  ",
-        "tooltip": false
-    },
-
-    "temperature": {
-        "critical-threshold": 50,
-        "format": " {temperatureC}°C  "
-    },
-
-    "memory": {
-        "format": "󰘚  {used}GiB  "
-    },
-
-    "disk": {
-    	"format": "  {free}"
+    "custom/updates": {
+    	"format": "{} ",
+	"exec": "~/.config/waybar/scripts/updates.sh",
     },
 
     "mpris": {
@@ -105,13 +100,31 @@
 	"ignored-players": ["firefox"]
     },
 
+    "cpu": {
+        "format": " {usage}%  ",
+        "toosltip": false
+    },
+
+    "temperature": {
+        "critical-threshold": 50,
+        "format": " {temperatureC}°C  "
+    },
+
+    "memory": {
+        "format": "󰘚  {used}GiB  "
+    },
+
+    "disk": {
+    	"format": "  {free}"
+    },
+
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
+        "format": " {icon} {volume}% {format_source}",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "   {format_source} ",
+        "format-source": " {volume} % ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -127,7 +140,7 @@
 
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
+        "format": " {icon} {percent}% ",
         "format-icons": ["", "", "", "", ""]
     },
 }]

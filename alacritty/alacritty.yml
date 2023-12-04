@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 # Font config:
 font:
   normal:
     family: Iosevka Nerd Font Mono
     style: Regular
 
+=======
+>>>>>>> refs/remotes/origin/main
 selection:
   save_to_clipboard: true
 
