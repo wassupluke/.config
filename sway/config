@@ -83,6 +83,7 @@ floating_modifier $mod
 
 # launchers
 bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+e exec --no-startup-id dolphin
 bindsym $mod+b exec --no-startup-id brave
 
 # update mirrors
