@@ -75,9 +75,6 @@ exec swayidle -w \
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-
 # launchers
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+e exec --no-startup-id dolphin
