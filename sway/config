@@ -1,6 +1,10 @@
-set $mod Mod4
 font pango:Iosevka Nerd Font 10
 smart_borders on
+
+# Variables
+set $mod Mod4
+set $term alacritty
+set $wallpaper ~/.config/sway/walls/foggy_forest.png fill
 
 # Import machine-specific configs
 include "config.d/$(cat /etc/hostname)"
@@ -18,7 +22,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 exec --no-startup-id nm-applet
 
 # Set my wallpaper
-output * bg ~/.config/sway/walls/foggy_forest.png fill
+output * bg $wallpaper
 
 # Screenshot all visible outputs to clipboard and Pictures
 bindsym Print exec grimshot copy screen && grimshot save screen
@@ -76,7 +80,7 @@ exec swayidle -w \
 floating_modifier $mod
 
 # launchers
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+e exec --no-startup-id dolphin
 bindsym $mod+b exec --no-startup-id brave
 
@@ -277,12 +281,19 @@ for_window [class="^.*"] border pixel 2
 #set_from_resource $fg i3wm.color1 #f0f0f0
 #set_from_resource $bg i3wm.color2 #f0f0f0
 
-# class			border	bground	text	indicator	child_corder
-client.focused		#E42022	#E42022	#FFFFFF	#14E3C288	#E42022
-client.focused_inactive	#44475A	#44475A	#F8F8F2	#44475A		#44475A
-client.unfocused	#282A36	#282A36	#BFBFBF	#282A36		#282A36
-client.urgent		#44475A	#FF5555	#F8F8F2	#FF5555		#FF5555
-client.background	#F8F8F2
+set $cl_high #E42022
+set $cl_indi #14E3C288
+set $cl_fore #F8F8F2
+set $cl_back #282A36
+set $cl_urge #44475A
+set $cl_lime #00ff00
+
+# class			        border	    bground	    text	    indicator	child_corder
+client.focused		    $cl_high    $cl_high	$cl_fore    $cl_indi    $cl_high
+client.focused_inactive	$cl_urge	$cl_urge	$cl_fore    $cl_urge	$cl_urge
+client.unfocused	    $cl_back    $cl_back    $cl_fore    $cl_back	$cl_back
+client.urgent		    $cl_urge	$cl_lime    $cl_back    $cl_lime	$cl_lime
+client.background	    $cl_back
 
 bar {
 	swaybar_command waybar
