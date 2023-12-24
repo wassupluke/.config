@@ -38,3 +38,6 @@ my linux configs
   <li>wl-clipboard</li>
   <li>wlroots</li>
 </ul>
+
+## Packages for pacstrap on fresh Arch Install
+base linux linux-firmware mdadm neovim nnn firefox sof-firmware networkmanager network-manager-applet man-db man-pages texinfo sudo archlinux-keyring intel-ucode btrfs-progs curl coreutils efibootmgr efivar iw iwd mkinitcpio openssh polkit python python-pip git github-cli reflector rsync usb_modeswitch usbutils vim vim-runtime
