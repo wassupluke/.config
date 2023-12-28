@@ -46,6 +46,7 @@ libreoffice/
 lutris/
 lximage-qt/
 lxqt/
+pnpm
 menus/
 mimeapps.list
 neofetch/
@@ -66,6 +67,7 @@ requirements.txt
 savedconfigs_july23.zip
 session/
 spotify/
+teamviewer/
 tlk-games/
 trashrc
 user-dirs.dirs
