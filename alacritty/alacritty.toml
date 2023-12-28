@@ -1,0 +1,13 @@
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+opacity = 0.9
