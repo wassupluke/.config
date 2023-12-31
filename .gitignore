@@ -24,6 +24,7 @@ gdlauncher_next/
 glava/
 google-chrome/
 gtk-2.0/
+gtk-3.0/
 helpful_commands
 htop/
 hypr/
@@ -61,6 +62,7 @@ pavucontrol-qt/
 pavucontrol.ini
 pcmanfm-qt/
 polybar.old/
+Proton
 pulse/
 qterminal.org/
 requirements.txt
