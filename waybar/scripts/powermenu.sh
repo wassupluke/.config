@@ -7,7 +7,7 @@ option2="⏾	Suspend"
 option3="🔄	Reboot"
 option4="⏻	Shutdown"
 
-uptime="`uptime -p | sed -e 's/up //g'`"
+uptime="`uptime -p | sed -e 's/up //g' | sed -e 's/ day,/d/g' | sed -e 's/ hours,/h/g' | sed -e 's/ minutes/m/g'`"
 host=`hostname`
 
 # options passed into variable
