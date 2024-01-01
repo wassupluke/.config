@@ -115,7 +115,8 @@
     },
 
     "disk": {
-    	"format": "  {free}"
+    	"format": "  {free}",
+        "path": "/home/"
     },
 
     "pulseaudio": {
