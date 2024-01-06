@@ -28,3 +28,12 @@ set ttyfast                 " Speed up scrolling in Vim
 
 " KEYBINDS
 :inoremap ii <Esc>
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'wakatime/vim-wakatime'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
