@@ -4,7 +4,7 @@ smart_borders on
 # Variables
 set $mod Mod4
 set $term alacritty
-set $browser brave
+set $browser firefox
 set $file_explorer dolphin
 set $wallpaper ~/.config/sway/walls/foggy_forest.png fill
 
@@ -219,7 +219,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Application - Workspace Assignments
-assign [class="Brave-browser"] $ws2
+assign [app_id=$browser] $ws2
 assign [app_id="org.multimc.MultiMC"] $ws7
 assign [class="Minecraft*"] $ws7
 assign [class="discord"] $ws9
