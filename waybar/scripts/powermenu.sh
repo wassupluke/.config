@@ -22,7 +22,7 @@ case $chosen in
 	$option2)
 		exec systemctl suspend;;
 	$option3)
-		exec reboot;;
+		exec systemctl reboot;;
 	$option4)
-		exec systemctl poweroff;;
+		exec systemctl shutdown --poweroff;;
 esac
