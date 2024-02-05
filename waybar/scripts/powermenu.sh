@@ -24,5 +24,5 @@ case $chosen in
 	$option3)
 		exec systemctl reboot;;
 	$option4)
-		exec systemctl shutdown poweroff;;
+		exec systemctl poweroff;;
 esac
