@@ -17,14 +17,13 @@ include "config.d/$(cat /etc/hostname)"
 
 # Autostarts
 exec_always --no-startup-id /usr/bin/dunst
-# exec_always --no-startup-id mako
 exec --no-startup-id autotiling
-# exec_always --no-startup-id ~/.config/sway/scripts/middleMouseClearPrimary.sh
 exec wl-paste -t text --watch clipman store --no-persist
 exec --no-startup-id nm-applet
 
 # Set my wallpaper
 output * bg $wallpaper
+gaps inner 10
 
 # Screenshot all visible outputs to clipboard and Pictures
 bindsym Print exec grimshot copy screen && grimshot save screen
