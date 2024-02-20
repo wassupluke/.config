@@ -6,7 +6,6 @@ set $mod Mod4
 set $term alacritty
 set $browser brave
 set $file_explorer dolphin
-set $wallpaper ~/.config/sway/walls/foggy_forest.png fill
 
 # Import machine-specific configs
 include "config.d/$(cat /etc/hostname)"
@@ -21,8 +20,7 @@ exec --no-startup-id autotiling
 exec wl-paste -t text --watch clipman store --no-persist
 exec --no-startup-id nm-applet
 
-# Set my wallpaper
-output * bg $wallpaper
+# Gaps
 gaps inner 10
 
 # Screenshot all visible outputs to clipboard and Pictures
