@@ -90,12 +90,12 @@
 	"format": "{player_icon}  {artist} - {title}",
 	"format-paused": "{status_icon}  {artist} - {title}",
 	"player-icons": {
-                "default": "",
+                "default": "",
                 "spotifyd": "",
                 "spotify": ""
 	},
 	"status-icons": {
-                "paused": ""
+                "paused": ""
 	},
 	"ignored-players": ["firefox"]
     },
