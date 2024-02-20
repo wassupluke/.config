@@ -30,8 +30,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%  {time}  ",
-        "format-charging": " {capacity}%  ",
-        "format-plugged": " {capacity}%  ",
+        "format-charging": "󱐥 {capacity}%  ",
+        "format-plugged": "󱐥 {capacity}%  ",
         "format-alt": "{icon} {capacity}%  ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -101,17 +101,19 @@
     },
 
     "cpu": {
-        "format": " {usage}%  ",
-        "toosltip": false
+        "format": " {usage}%  ",
+        "tooltip": false
     },
 
     "temperature": {
         "critical-threshold": 50,
-        "format": " {temperatureC}°C  "
+        "format": " {temperatureC}°C  ",
+        "tooltip": false
     },
 
     "memory": {
-        "format": "󰘚  {used}GiB  "
+        "format": "󰘚 {used}GiB  ",
+        "tooltip": false
     },
 
     "disk": {
