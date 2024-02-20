@@ -11,12 +11,12 @@
 }
 
 .modules-right > * > *, .modules-left, .modules-center {
-  border-radius: 12px;
+  border-radius: 2px;
 }
 
 .modules-right > * > *, .modules-left {
   font-weight: normal;
-  color: #000;
+  color: black;
   background-color: #E42022;
 }
 
@@ -31,15 +31,28 @@ window#waybar {
   background-color: #090909;
   color: #dcdcdc;
   font-weight: bold;
-  border: solid 10px #090909;
+}
+
+#battery {
+}
+
+#battery.charging {
+    color: lime;
+}
+
+@keyframes blink {
+    to {
+        background-color: orange;
+        color: white;
+    }
 }
 
 #battery.critical:not(.charging) {
     background-color: #E42022;
-    color: #ffffff;
+    color: white;
     animation-name: blink;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -50,8 +63,6 @@ window#waybar {
 
 #window {
   background-color: #191919;
-  border-radius: 12px;
-  padding: 0px 12px;
 }
 
 window#waybar.empty #window {
@@ -60,27 +71,22 @@ window#waybar.empty #window {
 
 #workspaces button {
   font-weight: normal;
-  padding: 0 2px;
   background: none;
   border: none;
-  border-radius: 1000px;
+  border-radius: 3px;
 }
 
 #workspaces button.focused, #workspaces button.active {
   background-color: lightgray;
   color: #191919;
-  border: solid 2px #E42022;
 }
 
 #mpris {
-  padding: 0 6px;
   font-weight: normal;
+  margin-right: 4px;
 }
 
 #mpris.spotifyd, #mpris.spotify {
   background-color: #1DB954;
   color: #191414;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  padding: 0px 12px;
 }
