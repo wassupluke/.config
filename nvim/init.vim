@@ -1,3 +1,7 @@
+" Python3 for Vim (yay pynvim, or, for venv, python3 -m pip install --user
+" --upgrade pynvim)
+let g:python3_host_prog = '/path/to/python3'
+
 " SETTINGS
 
 set scrolloff=999
