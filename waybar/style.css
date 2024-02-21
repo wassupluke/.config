@@ -28,8 +28,9 @@
 }*/
 
 window#waybar {
-  background-color: #090909;
-  color: #dcdcdc;
+  background-color: rgba(9, 9, 9, 0.88);
+  /*background-color: #090909,0.5;*/
+  color: gainsboro;
   font-weight: bold;
 }
 
