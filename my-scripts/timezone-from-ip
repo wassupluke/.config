@@ -1,5 +1,5 @@
 #!/bin/sh
-# sudo ln -sf /home/wassu/.config/my-scripts/timezone-from-ip /etc/NetworkManager/dispatcher.d/09-timezone
+# sudo ln -sf /home/wassu/.config/my-scripts/timezone-from-ip /etc/NetworkManager/dispatcher.d/09-timezone && sudo chmod +x /home/wassu/.config/my-scripts/timezone-from-ip
 # https://wiki.archlinux.org/title/System_time
 
 case "$2" in
