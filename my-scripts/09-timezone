@@ -1,8 +1,0 @@
-#!/bin/sh
-# sudo ln -sf /home/wassu/.config/my-scripts/09-timezone /etc/NetworkManager/dispatcher.d/09-timezone
-
-case "$2" in
-    up)
-        timedatectl set-timezone "$(curl --fail curl https://ipapi.co/timezone)"
-    ;;
-esac
