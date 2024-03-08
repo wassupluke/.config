@@ -11,15 +11,15 @@
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{icon}",
+        "format": "{index}:{icon}",
         "format-icons": {
             "1": "",
             "2": "󰖟",
 	        "7": "󰍳",
             "9": "",
             "10": "",
+            "default": "󰍹",
             "urgent": "",
-            "default": ""
         }
     },
 

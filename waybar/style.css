@@ -82,6 +82,10 @@ window#waybar.empty #window {
   color: #191919;
 }
 
+#workspaces button.urgent {
+    background-color: limegreen;
+}
+
 #mpris {
   font-weight: normal;
   margin-right: 4px;

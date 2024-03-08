@@ -222,7 +222,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 assign [app_id=$browser] $ws2
 assign [app_id="org.multimc.MultiMC"] $ws7
 assign [class="Minecraft*"] $ws7
-assign [class="discord"] $ws9
+assign [class="vesktop"] $ws9
 assign [class="Spotify"] $ws10
 
 # reload the configuration file in place
