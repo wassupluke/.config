@@ -4,28 +4,30 @@
   font-family: "Iosevka Nerd Font";
   font-size: 13px;
   min-height: 0;
+  font-weight: normal;
 }
 
 .modules-right, .modules-left, .modules-center {
   margin: 4px;
 }
 
-.modules-right > * > *, .modules-left, .modules-center {
+.modules-right > * > *, .modules-left > * > * {
+  background-color: #E42022;
   border-radius: 2px;
 }
 
 .modules-right > * > *, .modules-left {
-  font-weight: normal;
   color: black;
-  background-color: #E42022;
 }
 
 .modules-center {
+  background-color: rgba(0,0,0,0);
 }
 
-/*#tray {
-  padding: 0px 12px;
-}*/
+#tray {
+  padding: 0 2px 0 2px;
+  background-color: #E42022;
+}
 
 window#waybar {
   background-color: rgba(9, 9, 9, 0.88);
@@ -58,10 +60,6 @@ window#waybar {
     animation-direction: alternate;
 }
 
-.modules-left {
-  background-color: #E42022;
-}
-
 #window {
   background-color: #191919;
 }
@@ -71,10 +69,9 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-  font-weight: normal;
   background: none;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 #workspaces button.focused, #workspaces button.active {
@@ -86,9 +83,13 @@ window#waybar.empty #window {
     background-color: limegreen;
 }
 
+#custom-updates {
+    background-color: #E42022;
+}
+
 #mpris {
-  font-weight: normal;
-  margin-right: 4px;
+  padding: 0 4px 0 4px;
+  border-radius: 2px;
 }
 
 #mpris.spotifyd, #mpris.spotify {
