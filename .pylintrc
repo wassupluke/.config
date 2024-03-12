@@ -102,6 +102,8 @@ disable=
     missing-docstring,
     protected-access,
     too-few-public-methods,
+    unspecified-encoding,
+    used-before-assignment,
     # handled by black
     format,
     # We anticipate #3512 where it will become optional
