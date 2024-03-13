@@ -149,7 +149,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 30
+vim.opt.scrolloff = 3
 
 -- My additional settings.
 local set = vim.opt
@@ -176,8 +176,13 @@ end
 --Map "ii" to the exit_insert_mode function in insert mode
 vim.api.nvim_set_keymap("i", "ii", "<cmd>lua Exit_insert_mode()<CR>", { noremap = true, silent = true })
 
+-- Center view when jumping half pages up and down
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+
+-- Center view when jumping up and down search results
+vim.keymap.set("n", "n", "nzzzv", { noremap = true, silent = true })
+vim.keymap.set("n", "N", "Nzzzv", { noremap = true, silent = true })
 -- [[ End My Custom Keymaps ]]
 
 -- [[ Basic Keymaps ]]
