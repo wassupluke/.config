@@ -149,7 +149,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 30
 
 -- My additional settings.
 local set = vim.opt
@@ -166,7 +166,7 @@ set.autoindent = true
 -- set an 80 column border for good code style
 vim.wo.colorcolumn = "80"
 
--- [[ My Custom Keymaps ]]
+-- [[ Start My Custom Keymaps ]]
 -- Define a function to exit insert mode when "ii" is pressed
 function Exit_insert_mode()
 	--exit insert mode
@@ -175,6 +175,10 @@ end
 
 --Map "ii" to the exit_insert_mode function in insert mode
 vim.api.nvim_set_keymap("i", "ii", "<cmd>lua Exit_insert_mode()<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+-- [[ End My Custom Keymaps ]]
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
