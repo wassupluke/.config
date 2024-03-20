@@ -163,6 +163,7 @@ set.wildmode = "longest,list"
 set.ttyfast = true
 set.autowrite = true
 set.autoindent = true
+set.smartindent = true
 -- set an 80 column border for good code style
 vim.wo.colorcolumn = "80"
 
