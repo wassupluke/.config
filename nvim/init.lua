@@ -167,14 +167,14 @@ set.autoindent = true
 vim.wo.colorcolumn = "80"
 
 -- [[ Start My Custom Keymaps ]]
--- Define a function to exit insert mode when "ii" is pressed
+-- Define a function to exit insert mode when "jj" is pressed
 function Exit_insert_mode()
 	--exit insert mode
 	vim.cmd("stopinsert")
 end
 
---Map "ii" to the exit_insert_mode function in insert mode
-vim.api.nvim_set_keymap("i", "ii", "<cmd>lua Exit_insert_mode()<CR>", { noremap = true, silent = true })
+--Map "jj" to the exit_insert_mode function in insert mode
+vim.api.nvim_set_keymap("i", "jj", "<cmd>lua Exit_insert_mode()<CR>", { noremap = true, silent = true })
 
 -- Center view when jumping half pages up and down
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
