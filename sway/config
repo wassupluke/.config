@@ -23,9 +23,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xhost si:localuser:root
 exec --no-startup-id "/usr/lib/polkit-kde-authentication-agent-1"
 
-# Gaps
-gaps inner 10
-
 # Screenshot all visible outputs to clipboard and Pictures
 bindsym Print exec grimshot copy screen && grimshot save screen
 # Screenshot only active window to clipboard and Pictures
@@ -152,15 +149,8 @@ input type:touchpad {
 	events disabled
 	}
 
-# Disables mouse acceleration
-input type:touchpad {
-	accel_profile flat
-	pointer_accel 0
-	}
-input type:pointer {
-	accel_profile flat
-	pointer_accel 0.25
-	}
+# Mouse Acceleration
+# --- --- --- See config.d --- --- ---
 
 # disable / enable touchpad
 bindsym $mod+n exec swaymsg input type:touchpad events disabled
