@@ -12,7 +12,7 @@ bindsym --locked $mod+F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SIN
 bindsym --locked $mod+F8 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # Set my wallpaper
-set $wallpaper ~/.config/sway/walls/foggy_forest.png fill
+set $wallpaper ~/.config/sway/walls/Bliss.png fill
 output * bg $wallpaper
 
 # Mouse Acceleration
