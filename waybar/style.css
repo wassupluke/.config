@@ -12,7 +12,7 @@
 }
 
 .modules-right > * > *, .modules-left > * > * {
-  background-color: #E42022;
+  background-color: #81C046;
   border-radius: 2px;
 }
 
@@ -26,12 +26,11 @@
 
 #tray {
   padding: 0 2px 0 2px;
-  background-color: #E42022;
+  background-color: #81C046;
 }
 
 window#waybar {
-  background-color: rgba(9, 9, 9, 0.88);
-  /*background-color: #090909,0.5;*/
+  background-color: rgba(36, 93, 218, 0.88);
   color: gainsboro;
   font-weight: bold;
 }
@@ -40,7 +39,7 @@ window#waybar {
 }
 
 #battery.charging {
-    color: lime;
+    color: #81C046;
     animation-name: charging;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -62,7 +61,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #E42022;
+    background-color: #DE482B;
     color: white;
     animation-name: blink;
     animation-duration: 1s;
@@ -72,7 +71,7 @@ window#waybar {
 }
 
 #temperature.critical {
-  background-color: #E42022;
+  color: #FCCF03;
 }
 
 #window {
@@ -93,11 +92,11 @@ window#waybar.empty #window {
 }
 
 #workspaces button.urgent {
-    background-color: limegreen;
+    background-color: #FCCF03;
 }
 
 #custom-updates {
-    background-color: #E42022;
+    background-color: #81C046;
 }
 
 #mpris {
