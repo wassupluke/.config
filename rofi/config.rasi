@@ -14,12 +14,12 @@ configuration {
 	tokenize:			true;
 }
 
-@theme "/dev/null"
+@theme "colors/windows-xp.rasi"
 
 * {
 	bg:				transparent;
 	fg:				#ffffff;
-	accent:				#E42022;
+	accent:				#3B77BC;
 	button:				#1c1c1c;
 	dim:				#909090;
 
@@ -30,9 +30,9 @@ configuration {
 window {
 	width:			    	25%;
 	padding: 			3% 2% 1% 2%;
-	border:				2px solid;
+	border:				35px 3px 3px 3px solid;
 	border-color:			@accent;
-	border-radius:                  9px;
+	border-radius:                  8px 8px 0px 0px;
 	background-color:		black / 66%;
 }
 
