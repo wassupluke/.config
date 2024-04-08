@@ -2,10 +2,9 @@
     "layer": "bottom", 
     "position": "bottom",
     "height": 25,
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["custom/powermenu", "custom/updates", "sway/workspaces", "mpris"],
+    "modules-left": ["custom/powermenu", "sway/workspaces", "mpris"],
     "modules-center": ["cpu", "temperature", "memory", "disk", "battery", "network"],
-    "modules-right": ["pulseaudio", "backlight", "tray", "clock"],
+    "modules-right": ["custom/updates", "pulseaudio", "backlight", "tray", "clock"],
 
     // Bottom modules configuration
     "tray": {
@@ -33,7 +32,7 @@
     },
 
     "cpu": {
-        "format": " {usage}%  ",
+        "format": "  {usage}%  ",
         "tooltip": false
     },
 
@@ -100,7 +99,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%  {time} ",
+        "format": " {icon} {capacity}%  {time} ",
         "format-charging": " 󱐥 {capacity}% ",
         "format-plugged": " 󱐥 {capacity}% ",
         "format-alt": "{icon} {capacity}% ",
@@ -127,13 +126,13 @@
     },
 
     "clock": {
-        "format": "   {:%a %d %b, %I:%M %p} "
+        "format": " {:%a %d %b, %I:%M %p} "
     },
 
     "custom/powermenu": {
 	"font-size": 65,
 	"format-icons": ["󰨡"],
-    	"format": " <span size='large'>{icon}</span> <span color='white' size='large'><b><i>Start</i></b></span> ",
+    	"format": " <span size='large'>{icon}</span> <span size='large'><b><i> start</i></b></span> ",
 	"on-click": "exec ~/.config/waybar/scripts/powermenu.sh",
 
     },

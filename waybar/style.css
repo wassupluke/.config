@@ -1,42 +1,25 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: "Noto Sans", "Font Awesome"; */
-  font-family: "Iosevka Nerd Font";
+  font-family: "Tahoma";
   font-size: 13px;
   min-height: 0;
   font-weight: normal;
 }
 
-.modules-right, .modules-left, .modules-center {
-  margin: 4px;
+.modules-right > * > * {
+  background: linear-gradient(180deg, #25a6fc 0, #13a2e8 14%, #129ae8 28%, #109def 42%, #1599ee 57%, #1394f2 71%, #0fa0ef 85%, #0671d2);
 }
 
 .modules-right > * > *, .modules-left > * > * {
-  background: linear-gradient(180deg,#4cc04f 0,#3cb03a 14%,#00a301 28%,#009f00 42%,#00b000 57%,#00b600 71%,#00af00 85%,#00a000);
-  border-radius: 2px;
-}
-
-.modules-right > * > *, .modules-left {
-  color: black;
-}
-
-.modules-center {
-  background-color: rgba(0,0,0,0);
-}
-
-#tray {
+  color: white;
   padding: 0 2px 0 2px;
-  background: linear-gradient(180deg,#4cc04f 0,#3cb03a 14%,#00a301 28%,#009f00 42%,#00b000 57%,#00b600 71%,#00af00 85%,#00a000)
 }
 
 window#waybar {
   background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
-/*  background-color: rgba(36, 93, 218, 0.88); */
   color: gainsboro;
   font-weight: bold;
-}
-
-#battery {
 }
 
 #battery.charging {
@@ -84,7 +67,8 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-  border-radius: 2px;
+  margin: 0 0 0 4px;
+  border-radius: 3px;
 }
 
 #workspaces button.focused, #workspaces button.active {
@@ -98,6 +82,12 @@ window#waybar.empty #window {
 
 #custom-updates {
     background-color: #81C046;
+}
+
+#custom-powermenu {
+  background: linear-gradient(180deg,#4cc04f 0,#3cb03a 14%,#00a301 28%,#009f00 42%,#00b000 57%,#00b600 71%,#00af00 85%,#00a000);
+  padding: 0 8px 0 0;
+  border-radius: 0 7px 7px 0;
 }
 
 #mpris {
