@@ -1,4 +1,5 @@
 # Contains machine-specfic configs
+# ArchT460
 
 # Brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brillo -q -U 3 && $refresh_i3status
@@ -15,3 +16,19 @@ bindsym --locked XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DE
 #set $wallpaper ~/.config/sway/walls/foggy_forest.png fill
 set $wallpaper ~/.config/sway/walls/jay-cooke.jpg fill
 output * bg $wallpaper
+
+# Gaps
+gaps inner 10
+
+# Mouse Acceleration
+# Disables touchpad mouse acceleration
+input type:touchpad {
+	accel_profile flat
+	pointer_accel 0
+	natural_scroll enabled
+	}
+# Disables trackpoint mouse acceleration
+input type:pointer {
+	accel_profile flat
+	pointer_accel 1
+	}

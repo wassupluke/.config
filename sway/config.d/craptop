@@ -1,4 +1,5 @@
 # Contains machine-specfic configs
+# craptop
 
 # Brightness
 bindsym $mod+F6 exec --no-startup-id brillo -q -U 3 && $refresh_i3status
@@ -11,5 +12,18 @@ bindsym --locked $mod+F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SIN
 bindsym --locked $mod+F8 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # Set my wallpaper
-set  ~/.config/sway/walls/foggy_forest.png fill
-output * bg 
+set $wallpaper ~/.config/sway/walls/foggy_forest.png fill
+output * bg $wallpaper
+
+# Mouse Acceleration
+# Disables touchpad mouse acceleration
+input type:touchpad {
+	accel_profile flat
+	pointer_accel 0
+	natural_scroll enabled
+	}
+# Disables trackpoint mouse acceleration
+input type:pointer {
+	accel_profile flat
+	pointer_accel 1
+	}

@@ -71,6 +71,10 @@ window#waybar {
     animation-direction: alternate;
 }
 
+#temperature.critical {
+  background-color: #E42022;
+}
+
 #window {
   background-color: #191919;
 }
