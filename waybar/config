@@ -32,18 +32,18 @@
     },
 
     "cpu": {
-        "format": "  {usage}%  ",
+        "format": "  {usage}%",
         "tooltip": false
     },
 
     "temperature": {
         "critical-threshold": 50,
-        "format": " {temperatureC}°C  ",
+        "format": " {temperatureC}°C",
         "tooltip": false
     },
 
     "memory": {
-        "format": "󰘚 {used}GiB  ",
+        "format": "󰘚 {used}GiB",
         "tooltip": false
     },
 
@@ -53,13 +53,13 @@
     },
 
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": " {icon} {volume}% {format_source}",
-        "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "   {format_source} ",
-        "format-source": " {volume} % ",
-        "format-source-muted": " ",
+        "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -74,7 +74,7 @@
 
     "backlight": {
         // "device": "acpi_video1",
-        "format": " {icon} {percent}% ",
+        "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", ""]
     },
 
@@ -99,34 +99,34 @@
             "warning": 30,
             "critical": 15
         },
-        "format": " {icon} {capacity}%  {time} ",
-        "format-charging": " 󱐥 {capacity}% ",
-        "format-plugged": " 󱐥 {capacity}% ",
-        "format-alt": "{icon} {capacity}% ",
+        "format": "{icon} {capacity}% {time}",
+        "format-charging": "󱐥 {capacity}%",
+        "format-plugged": "󱐥 {capacity}%",
+        "format-alt": "{icon} {capacity}%",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
     },
 
     "network": {
-    "format-wifi": "  {essid}  ",
-    "format-ethernet": "{ifname}    ",
-    "format-ethernet": "{ifname}    ",
-    "format-disconnected": "   ",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "{ifname} ",
+    "format-ethernet": "{ifname} ",
+    "format-disconnected": "",
     "max-length": 50,
     "on-click": "alacritty -e 'nmtui'"
     },
 
     "network#2": {
     "interface": "enp6s0",
-    "format": "{ifname}  ",
-    "format-ethernet": "{ipaddr}/{cidr}    ",
+    "format": "{ifname}",
+    "format-ethernet": "{ipaddr}/{cidr}  ",
     "format-disconnected": "", //An empty format will hide the module.
     "max-length": 50
     },
 
     "clock": {
-        "format": " {:%a %d %b, %I:%M %p} "
+        "format": "{:%a %d %b, %I:%M %p}"
     },
 
     "custom/powermenu": {

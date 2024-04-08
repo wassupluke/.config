@@ -7,13 +7,14 @@
   font-weight: normal;
 }
 
-.modules-right > * > * {
+.modules-right {
   background: linear-gradient(180deg, #25a6fc 0, #13a2e8 14%, #129ae8 28%, #109def 42%, #1599ee 57%, #1394f2 71%, #0fa0ef 85%, #0671d2);
+  padding: 0 6px 0 4px;
 }
 
-.modules-right > * > *, .modules-left > * > * {
+.modules-left > * > *, .modules-center > * > *, .modules-right > * > * {
   color: white;
-  padding: 0 2px 0 2px;
+  padding: 0 4px 0 4px;
 }
 
 window#waybar {
@@ -44,6 +45,29 @@ window#waybar {
     }
 }
 
+#cpu {
+  border-bottom: 2px solid cyan;
+}
+
+#temperature {
+  border-bottom: 2px solid orange;
+}
+#temperature.critical {
+  color: #FCCF03;
+}
+
+#memory {
+  border-bottom: 2px solid yellow;
+}
+
+#disk {
+  border-bottom: 2px solid blue;
+}
+
+#battery {
+  border-bottom: 2px solid lime;
+}
+
 #battery.critical:not(.charging) {
     background-color: #DE482B;
     color: white;
@@ -54,8 +78,8 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#temperature.critical {
-  color: #FCCF03;
+#network {
+  border-bottom: 2px solid lightgray;
 }
 
 #window {
@@ -80,13 +104,9 @@ window#waybar.empty #window {
     background-color: #FCCF03;
 }
 
-#custom-updates {
-    background-color: #81C046;
-}
-
 #custom-powermenu {
   background: linear-gradient(180deg,#4cc04f 0,#3cb03a 14%,#00a301 28%,#009f00 42%,#00b000 57%,#00b600 71%,#00af00 85%,#00a000);
-  padding: 0 8px 0 0;
+  padding: 0 8px 0 1px;
   border-radius: 0 7px 7px 0;
 }
 
