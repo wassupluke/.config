@@ -9,7 +9,7 @@
 
     // Bottom modules configuration
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 20,
         "spacing": 2
     },
 
@@ -131,7 +131,9 @@
     },
 
     "custom/powermenu": {
-    	"format": " 󰐥 ",
+	"font-size": 65,
+	"format-icons": ["󰨡"],
+    	"format": " <span size='large'>{icon}</span> <span color='white' size='large'><b><i>Start</i></b></span> ",
 	"on-click": "exec ~/.config/waybar/scripts/powermenu.sh",
 
     },

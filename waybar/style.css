@@ -12,7 +12,7 @@
 }
 
 .modules-right > * > *, .modules-left > * > * {
-  background-color: #81C046;
+  background: linear-gradient(180deg,#4cc04f 0,#3cb03a 14%,#00a301 28%,#009f00 42%,#00b000 57%,#00b600 71%,#00af00 85%,#00a000);
   border-radius: 2px;
 }
 
@@ -26,11 +26,12 @@
 
 #tray {
   padding: 0 2px 0 2px;
-  background-color: #81C046;
+  background: linear-gradient(180deg,#4cc04f 0,#3cb03a 14%,#00a301 28%,#009f00 42%,#00b000 57%,#00b600 71%,#00af00 85%,#00a000)
 }
 
 window#waybar {
-  background-color: rgba(36, 93, 218, 0.88);
+  background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
+/*  background-color: rgba(36, 93, 218, 0.88); */
   color: gainsboro;
   font-weight: bold;
 }
