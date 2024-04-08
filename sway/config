@@ -263,8 +263,8 @@ for_window [class="^.*"] border pixel 2
 #set_from_resource $fg i3wm.color1 #f0f0f0
 #set_from_resource $bg i3wm.color2 #f0f0f0
 
-set $cl_high #3B77BC
-set $cl_indi #FCCF03
+set $cl_high #FCCF03
+set $cl_indi #3B77BC
 set $cl_fore #F8F8F2
 set $cl_back #282A36
 set $cl_urge #44475A
