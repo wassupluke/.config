@@ -130,9 +130,8 @@
     },
 
     "custom/powermenu": {
-	"font-size": 65,
 	"format-icons": ["󰨡"],
-    	"format": " <span size='large'>{icon}</span> <span size='large'><b><i> start</i></b></span> ",
+    	"format": " <span size='large'>{icon} <b><i>start</i></b></span> ",
 	"on-click": "exec ~/.config/waybar/scripts/powermenu.sh",
 
     },
