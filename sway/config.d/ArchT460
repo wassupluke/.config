@@ -30,5 +30,5 @@ input type:touchpad {
 # Disables trackpoint mouse acceleration
 input type:pointer {
 	accel_profile flat
-	pointer_accel 1
+	pointer_accel 0.25
 	}
