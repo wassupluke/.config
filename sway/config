@@ -15,9 +15,7 @@ include "config.d/$(cat /etc/hostname)"
 # xwayland disable
 
 # Autostarts
-# kill dunst and reload to see theme changes
-exec_always --no-startup-id killall dunst
-exec_always --no-startup-id /usr/bin/dunst
+exec_always --no-startup-id killall dunst; /usr/bin/dunst
 exec --no-startup-id autotiling
 exec wl-paste -t text --watch clipman store --no-persist
 exec --no-startup-id nm-applet
