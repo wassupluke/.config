@@ -264,18 +264,18 @@ for_window [class="^.*"] border pixel 2
 #set_from_resource $bg i3wm.color2 #f0f0f0
 
 set $cl_high #3B77BC
-set $cl_indi #14E3C288
+set $cl_indi #FCCF03
 set $cl_fore #F8F8F2
 set $cl_back #282A36
 set $cl_urge #44475A
 set $cl_lime #00ff00
 
-# class			        border	    bground	    text	    indicator	child_corder
-client.focused		    $cl_high    $cl_high	$cl_fore    $cl_indi    $cl_high
-client.focused_inactive	$cl_urge	$cl_urge	$cl_fore    $cl_urge	$cl_urge
-client.unfocused	    $cl_back    $cl_back    $cl_fore    $cl_back	$cl_back
-client.urgent		    $cl_urge	$cl_lime    $cl_back    $cl_lime	$cl_lime
-client.background	    $cl_back
+# class			        border		bground		text	    indicator	child_corder
+client.focused			$cl_high	$cl_high	$cl_fore    $cl_indi    $cl_high
+client.focused_inactive		$cl_urge	$cl_urge	$cl_fore    $cl_urge	$cl_urge
+client.unfocused		$cl_back	$cl_back	$cl_fore    $cl_back	$cl_back
+client.urgent			$cl_urge	$cl_lime	$cl_back    $cl_lime	$cl_lime
+client.background		$cl_back
 
 bar {
 	swaybar_command waybar
