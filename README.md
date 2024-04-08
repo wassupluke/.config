@@ -45,3 +45,6 @@ base linux linux-firmware mdadm neovim nnn firefox sof-firmware networkmanager n
 
 ## Using with .bashrc and .bash_profile
 ln -s /home/$USER/.config/.bashrc $HOME/.bashrc && ln -s /home/$USER/.config/.bash_profile $HOME/.bash_profile
+
+## Making themes work
+ln -s ~/.config/icons/windows-xp/ ~/.icons/windows-xp
