@@ -28,6 +28,8 @@ while true; do
             echo " $UPDATES "
         elif (( UPDATES > 1 )); then
             echo " $UPDATES "
+        else
+            echo ""
         fi
         sleep 10
         get_total_updates
