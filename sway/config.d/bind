@@ -17,6 +17,9 @@ set $term alacritty
 # Pref. Browser
 set $browser firefox
 
+# Pref. Explorer
+set $explorer dolphin
+
 # Application Launcher
 set $menu rofi -show run | xargs swaymsg exec -- 
 
@@ -42,7 +45,10 @@ bindsym {
     $mod+d exec $menu
     $mod+a exec $menu
 
-     # Make the current window Sticky
+    # start a file explorer
+    $mod+e exec $explorer
+
+    # Make the current window Sticky
     $mod+Shift+s sticky toggle
 
     # reload sway
