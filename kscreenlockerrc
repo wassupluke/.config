@@ -1,0 +1,7 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/alyssa/.local/share/wallpapers/Nature Nature 046 UHD.png
+PreviewImage=/home/alyssa/.local/share/wallpapers/Nature Nature 046 UHD.png
+SlidePaths=/home/alyssa/.local/share/wallpapers/,/usr/share/wallpapers/

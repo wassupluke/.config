@@ -1,0 +1,30 @@
+# /* vim: set filetype=conf : */
+
+exec {
+    # Clipboard Manager
+    copyq
+    # Notification Daemon
+    mako
+    # Adjust Screen Temp to reduce eye strain
+    # Configured with Lat:Long
+    gammastep -l 47.5:7.4
+    # Authenticator
+    /usr/lib/polkit-1/polkit-agent-helper-1
+}
+
+exec_always {
+    # Autotiling
+    pipx run autotiling -w 1 3 5 7 9
+}
+
+
+# Sway Idle
+exec swayidle -w \
+         tsimeout 300 'swaylock' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock'
+
+
+# Screen share
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway

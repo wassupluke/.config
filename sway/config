@@ -1,0 +1,11 @@
+# Include the dynamic theme config
+include ~/.config/sway/themes/dynamic
+
+# Include all configuration files
+include ./config.d/*
+
+# Include OS specific configuration
+include /etc/sway/config.d/*
+
+# Include output config, stored in default location defined by `nwg-displays`
+# include ./outputs

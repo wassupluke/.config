@@ -1,0 +1,25 @@
+[data.git]
+    email = ""
+    name = ""
+
+[data.theme]
+    background_image = "~/Pictures/Wallpapers/2.jpg"
+
+    white = "#ebdbb2"
+    dark = "#1d2021"
+    
+    primary = "#fd472f"
+    secondary = "#689d6a"
+    hint = "#fabd2f"
+
+# Simple rofi + wl-copy script to automatically copy fields
+# listed below. (~/.config/sway/scripts/clips/clips.sh)
+# <Name>: <Value>
+# Entries must be seperated by a new line.
+[data.clips]
+    data = """
+Email: hello@example.com 
+
+Address: Land, Earth
+
+"""

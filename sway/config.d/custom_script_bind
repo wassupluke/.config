@@ -1,0 +1,22 @@
+# /* vim: set filetype=conf : */
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+###  Script Execution
+set $script_dir "$HOME/.local/scripts/"
+
+# Current Working Dir terminal [ MOD + Control + Return (;) ]
+bindsym $mod+Control+Return exec "$script_dir/cwd-term"
+
+# Toggle Display Output
+bindsym --locked $mod+Shift+o exec "$script_dir/output-toggle"
+
+# Optical Character Recog
+bindsym $mod+o exec "$script_dir/ocr"
+
+### Clipboard selector - Clips
+bindsym $mod+c exec "$script_dir/clips"
+
+### Resolution Change
+bindsym $mod+slash exec "$script_dir/resolution-change"
