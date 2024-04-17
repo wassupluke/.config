@@ -34,39 +34,11 @@ bindsym Shift+Print exec grimshot copy active && grimshot save active
 bindsym Ctrl+Print exec grimshot copy area && grimshot save area
 
 exec swayidle -w \
-	timeout 180 'swaylock \
-			--screenshots \
-			--clock \
-			--indicator \
-			--indicator-radius 100 \
-			--indicator-thickness 7 \
-			--effect-blur 7x5 \
-			--effect-vignette 0.5:0.5 \
-			--ring-color e42022 \
-			--key-hl-color 00000088 \
-			--line-color 00000000 \
-			--inside-color 00000088 \
-			--separator-color 00000000 \
-			--grace 5 \
-			--fade-in 5' \
+	timeout 180 swaylock \
 	timeout 360 'swaymsg "output * power off"' \
 	resume 'swaymsg "output * power on"'\
 	before-sleep 'playerctl pause' \
-	before-sleep 'swaylock \
-			--screenshots \
-			--clock \
-			--indicator \
-			--indicator-radius 100 \
-			--indicator-thickness 7 \
-			--effect-blur 7x5 \
-			--effect-vignette 0.5:0.5 \
-			--ring-color e42022 \
-			--key-hl-color 00000088 \
-			--line-color 00000000 \
-			--inside-color 00000088 \
-			--separator-color 00000000 \
-			--grace 2 \
-			--fade-in 0.2'
+	before-sleep swaylock
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -89,19 +61,7 @@ bindsym mod1+Tab workspace back_and_forth
 bindsym $mod+Shift+b bar mode toggle
 
 # lock
-bindsym $mod+Escape exec swaylock \
-			--screenshots \
-			--clock \
-			--indicator \
-			--indicator-radius 100 \
-			--indicator-thickness 7 \
-			--effect-blur 7x5 \
-			--effect-vignette 0.5:0.5 \
-			--ring-color e42022 \
-			--key-hl-color 00000088 \
-			--line-color 00000000 \
-			--inside-color 00000088 \
-			--separator-color 00000000
+bindsym $mod+Escape exec swaylock
 
 # make these windows float
 for_window [app_id="galculator"] floating enable
