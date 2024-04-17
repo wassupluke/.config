@@ -4,7 +4,7 @@
     "height": 15,
     "modules-left": ["custom/powermenu", "sway/mode", "sway/workspaces", "sway/window", "custom/music"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "battery", "tray", "idle_inhibitor", "clock"],
+    "modules-right": ["pulseaudio", "custom/alsa", "network", "battery", "tray", "idle_inhibitor", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -86,6 +86,16 @@
     "custom/powermenu": {
         "format": "",
         "on-click": "exec ~/.config/waybar/scripts/powermenu.sh"
-    }
+    },
+
+    "custom/alsa": {
+        "exec": "~/.config/waybar/scripts/alsa.sh",
+        "on-click": "amixer set Master toggle",
+        "on-scroll-down": "amixer set Master 2%+",
+        "on-scroll-up": "amixer set Master 2%-",
+        "signal": 11,
+        "interval": 1,
+        "tooltip": false
+    },
    }
 }
