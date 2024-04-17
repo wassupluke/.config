@@ -16,7 +16,7 @@ options="$option0\n$option1\n$option2\n$option3\n$option4"
 chosen="$(echo -e "$options" | rofi -dmenu -p "Uptime: $uptime" -theme-str '#window {width: 25%;} #listview {lines: 5;}')"
 case $chosen in
 	$option0)
-		exec i3lock-fancy-rapid 10 3;;
+		exec swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color 3B77BC --key-hl-color 00000088 --line-color 00000000 --inside-color 00000088 --separator-color 00000000;;
 	$option1)
 		swaymsg exit;;
 	$option2)
