@@ -42,6 +42,7 @@ alias r='fc -s'
 alias rr='fc -s -2'
 alias h=history
 alias cd..='cd ..'
+alias diff='diff -u'
 alias ls='ls --color=always'
 alias la='ls -a --color=always'
 alias ll='ls -alF --color=always'
