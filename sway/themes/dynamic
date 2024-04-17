@@ -23,7 +23,7 @@ set $urgent_indicator #fabd2f
 gaps inner 7
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+smart_gaps off
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 smart_borders on
