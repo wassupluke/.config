@@ -182,7 +182,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-
 #
 # Volume control
 # https://wiki.archlinux.org/title/WirePlumber#Keyboard_volume_control
