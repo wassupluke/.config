@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     font-family: "Hasklig";
-    font-size: 16;
+    font-size: 12pt;
     min-height: 0;
     color: #ebdbb2;
 }
@@ -49,12 +49,65 @@ window#waybar {
     margin: 0 5px;
 }
 
+#battery.charging {
+    color: #b8bb26;
+    border-radius: 88px;
+    animation-name: charging;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes charging {
+    to {
+        color: white;
+    }
+}
+
+/* Flash green when charged above "good" */
+#battery:not(.critical):not(.warning):not(.good).charging {
+    background-color: #98971a;
+    border-radius: 88px;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(9);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #fabd2f;
+    border-radius: 88px;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(9);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #fb4934;
+    border-radius: 88px;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(9);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #1d2021;
+        border-radius: 88px;
+        color: white;
+    }
+}
 
 #idle_inhibitor.activated {
     background-color: #689d6a;
     color: #1d2021;
 }
-
 
 #custom-music {
     color: #fabd2f;
@@ -77,10 +130,5 @@ window#waybar {
 
 
 #network.disconnected {
-    color: #fd472f;
-}
-
-
-#pulseaudio.muted {
     color: #fd472f;
 }
