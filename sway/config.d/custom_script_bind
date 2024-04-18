@@ -19,4 +19,4 @@ bindsym $mod+o exec "$script_dir/ocr"
 bindsym $mod+c exec "$script_dir/clips"
 
 ### Resolution Change
-bindsym $mod+slash exec "$script_dir/resolution-change"
+# bindsym $mod+slash exec "$script_dir/resolution-change"

@@ -32,6 +32,10 @@ set $menu rofi -show run | xargs swaymsg exec --
 floating_modifier $mod normal
 
 bindsym {
+    # show help-prompt.sh
+    $mod+slash exec alacritty --class help-prompt -T help-prompt -e help-prompt.sh
+    $mod+Shift+slash exec alacritty --class help-prompt -T help-prompt -e help-prompt.sh
+
     # start a terminal
     $mod+Return exec $term
 
@@ -56,6 +60,13 @@ bindsym {
 
     # Alt + Tab
     mod1+Tab workspace back_and_forth
+    
+    # Screenshot all visible outputs to clipboard and Pictures
+    Print exec grimshot copy screen && grimshot save screen
+    # Screenshot only active window to clipboard and Pictures
+    Shift+Print exec grimshot copy active && grimshot save active
+    # Screenshot custom area to clipboard and Pictures
+    Ctrl+Print exec grimshot copy area && grimshot save area
 
 #
 # Moving around:
@@ -152,9 +163,18 @@ bindsym {
     $mod+t scratchpad show
 }
 
+
+
 # Application - Workspace Assignments
 assign [app_id="Firefox-esr"] workspace 2
 assign [class="Spotify"] workspace 10
+
+
+
+# Application - Floating Assignments
+for_window [title="help-prompt"] floating enable
+for_window [title="help-prompt"] resize set 870 650
+
 
 #
 # Resize Mode
