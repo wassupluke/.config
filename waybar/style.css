@@ -37,10 +37,12 @@ window#waybar {
 }
 
 #battery {
+    padding: 0 5px;
+    margin: 0 5px;
 }
 
 #battery.charging {
-    color: lime;
+    border-radius: 2px;
     animation-name: charging;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -50,25 +52,44 @@ window#waybar {
 
 @keyframes charging {
     to {
-        color: white;
+        color: lime;
     }
 }
 
-@keyframes blink {
-    to {
-        background-color: orange;
-        color: white;
-    }
+/* Flash green when charged above "good" */
+#battery:not(.critical):not(.warning):not(.good).charging {
+    background-color: lime;
+    border-radius: 2px;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(9);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-#battery.critical:not(.charging) {
-    background-color: #E42022;
-    color: white;
+#battery.warning:not(.charging) {
+    background-color: yellow;
     animation-name: blink;
     animation-duration: 1s;
     animation-timing-function: steps(6);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #E42022;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(6);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(0,0,0,0);
+        border-radius: 2px;
+    }
 }
 
 #temperature.critical {
