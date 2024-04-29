@@ -38,21 +38,22 @@ PS1=${red}'[\u@\h \W]'${clr}'\$'${blu}'$(__git_ps1 " (%s)") '${clr}
 set -o vi
 
 alias c='clear'
-alias r='fc -s'
-alias rr='fc -s -2'
-alias h=history
 alias cd..='cd ..'
-alias ls='ls --color=always'
-alias la='ls -a --color=always'
-alias ll='ls -alF --color=always'
-alias grep='grep --color=always'
-alias mkdir='mkdir -pv'
-alias gs='git fetch && git status'
 alias ga='git add'
 alias gc='git commit'
-alias vim='nvim'
-alias pylint="pylint --rcfile=~/.config/.pylintrc"
+alias grep='grep --color=always'
+alias gs='git fetch && git status'
+alias h=history
+alias hg='history | grep'
+alias la='ls -a --color=always'
+alias ll='ls -alF --color=always'
+alias ls='ls --color=always'
 alias make50='make CC=clang CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow" LDLIBS="-lcrypt -lcs50 -lm"'
+alias mkdir='mkdir -pv'
+alias pylint="pylint --rcfile=~/.config/.pylintrc"
+alias r='fc -s'
+alias rr='fc -s -2'
+alias vim='nvim'
 
 HISTCONTROL=ignoredups
 
