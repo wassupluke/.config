@@ -36,6 +36,8 @@ call plug#end()
 
 syntax on
 
+set mouse=a
+
 set ttyfast
 set incsearch
 set scrolloff=10
