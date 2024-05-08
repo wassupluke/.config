@@ -1,5 +1,5 @@
 # Include the dynamic theme config
-include ~/.config/sway/themes/dynamic
+include ~/.config/sway/themes/gruvbox
 
 # Include all configuration files
 include ./config.d/*
