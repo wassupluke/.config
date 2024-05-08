@@ -50,6 +50,7 @@ kwinrc
 kwinrulesrc
 kxkbrc
 libaccounts-glib/
+libreoffice/
 nwg-bar/
 nwg-displays/
 okularpartrc
@@ -68,6 +69,7 @@ sddmthemeinstallerrc
 session/
 spectaclerc
 systemsettingsrc
+trashrc
 user-dirs.dirs
 user-dirs.locale
 webengineurlinterceptoradblockrc
