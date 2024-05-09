@@ -50,6 +50,7 @@ alias ll='ls -alF --color=always'
 alias ls='ls --color=always'
 alias make50='make CC=clang CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow" LDLIBS="-lcrypt -lcs50 -lm"'
 alias mkdir='mkdir -pv'
+alias neofetch=fastfetch
 alias pylint="pylint --rcfile=~/.config/.pylintrc"
 alias r='fc -s'
 alias rr='fc -s -2'

@@ -5,6 +5,7 @@ nm-connection-editor
 git
 dolphin
 dmenu
+fastfetch
 bash
 alsa
 ttf-iosevka-nerd
@@ -42,5 +43,4 @@ xf86-input-synaptics
 
 YAY:
 autotiling
-brave-bin
 papirus-icon-theme
