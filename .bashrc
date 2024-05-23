@@ -61,3 +61,6 @@ HISTCONTROL=ignoredups
 # check the window size after each command and, if necessary,
 # update the values of the LINES and COLUMNS.
 shopt -s checkwinsize
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
