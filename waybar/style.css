@@ -29,6 +29,10 @@
   background-color: #E42022;
 }
 
+#idle_inhibitor {
+  padding: 0 6px 0 3px;
+}
+
 window#waybar {
   background-color: rgba(9, 9, 9, 0.88);
   /*background-color: #090909,0.5;*/

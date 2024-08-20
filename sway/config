@@ -36,7 +36,7 @@ bindsym Ctrl+Print exec grimshot copy area && grimshot save area
 exec swayidle -w \
 	timeout 180 swaylock \
 	timeout 360 'swaymsg "output * power off"' \
-	resume 'swaymsg "output * power on"'\
+	resume 'swaymsg "output * power on"' \
 	before-sleep 'playerctl pause' \
 	before-sleep swaylock
 

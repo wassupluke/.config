@@ -6,7 +6,7 @@
     "modules-left": ["sway/workspaces"],
     "modules-center": ["battery", "network"],
     "modules-right": ["clock", "custom/powermenu"],
-    
+
     // Top modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -71,7 +71,7 @@
     "position": "bottom",
     "height": 25,
     "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["tray", "custom/updates", "mpris"],
+    "modules-left": ["tray", "idle_inhibitor", "custom/updates", "mpris"],
     "modules-center": ["cpu", "temperature", "memory", "disk"],
     "modules-right": ["pulseaudio", "backlight"],
 
@@ -79,6 +79,14 @@
     "tray": {
         // "icon-size": 21,
         "spacing": 2
+    },
+
+    "idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+	    "activated": "",
+	    "deactivated": "󰛊"
+	}
     },
 
     "custom/updates": {
