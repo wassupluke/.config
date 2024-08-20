@@ -18,7 +18,7 @@ set $wallpaper ~/.config/sway/walls/jay-cooke.jpg fill
 output * bg $wallpaper
 
 # Gaps
-gaps inner 10
+# gaps inner 10
 
 # Mouse Acceleration
 # Disables touchpad mouse acceleration
