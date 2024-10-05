@@ -152,6 +152,8 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": " {icon} {percent}% ",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+	"on-click": "bash ~/.config/sway/scripts/nightlighttoggle.sh",
+	"tooltip-format": "click to toggle night-mode"
     },
 }]
