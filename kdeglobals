@@ -102,8 +102,12 @@ BrowserApplication=brave-browser.desktop
 ColorSchemeHash=68f7da041112b660ac4e6911cf4bf8a7b361feda
 XftSubPixel=none
 
+[Icons]
+Theme=breeze-dark
+
 [KDE]
 LookAndFeelPackage=GruvboxPlasma
+widgetStyle=Fusion
 
 [KFileDialog Settings]
 Allow Expansion=false
