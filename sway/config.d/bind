@@ -166,7 +166,7 @@ bindsym {
 
 
 # Application - Workspace Assignments
-assign [app_id="Firefox-esr"] workspace 2
+assign [app_id="firefox-esr"] workspace 2
 assign [class="Spotify"] workspace 10
 
 
