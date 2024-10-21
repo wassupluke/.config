@@ -11,4 +11,4 @@ export GDK_BACKEND=wayland
 export XDG_CURRENT_DESKTOP=sway
 
 # Created by `pipx` on 2024-10-14 03:56:02
-export PATH="$PATH:/home/alyssa/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
