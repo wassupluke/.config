@@ -10,4 +10,4 @@
 	&& eval "$(register-python-argcomplete pipx)" \
 	&& wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip \
 	&& unzip "*.zip" "*.ttf" "*.otf" -d ${HOME}/.fonts \
-	&& sudo fc-cache -f -v
+	; sudo fc-cache -f -v
