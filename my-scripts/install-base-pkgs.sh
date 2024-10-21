@@ -9,6 +9,8 @@
 	&& pipx ensurepath \
 	&& eval "$(register-python-argcomplete pipx)" \
 	&& wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip \
-	&& unzip "*.zip" "*.ttf" "*.otf" -d ${HOME}/.fonts \
+	&& unzip -n "*.zip" "*.ttf" "*.otf" -d ${HOME}/.fonts \
 	; rm IosevkaTerm.zip \
-	&& sudo fc-cache -f -v
+	&& sudo fc-cache -f -v \
+	&& curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
+	&& sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
