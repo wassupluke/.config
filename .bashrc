@@ -31,7 +31,7 @@ clr='\[\033[00m\]'      # Reset
 
 # New username line with git branch
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-source ~/.config/git/git-prompt.sh
+source ~/.config/my-scripts/git-prompt.sh
 PS1=${red}'[\u@\h \W]'${clr}'\$'${blu}'$(__git_ps1 " (%s)") '${clr}
 
 # Allows use of vim motions on the command line
