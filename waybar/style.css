@@ -25,7 +25,10 @@ window#waybar {
 }
 
 /* Workspace Buttons */
-#workspaces button label{
+#workspaces button {
+    min-width: 33px;
+}
+#workspaces button label {
     color: #5B9EA6;
 }
 #workspaces button.focused label {
