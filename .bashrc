@@ -61,3 +61,6 @@ HISTCONTROL=ignoredups
 # check the window size after each command and, if necessary,
 # update the values of the LINES and COLUMNS.
 shopt -s checkwinsize
+
+# Created by `pipx` on 2024-10-21 17:08:02
+export PATH="$PATH:/home/wassu/.local/bin"

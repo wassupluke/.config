@@ -15,13 +15,13 @@ include "config.d/$(cat /etc/hostname)"
 # xwayland disable
 
 # Autostarts
-exec_always --no-startup-id killall dunst; /usr/bin/dunst
+exec_always --no-startup-id killall dunst; dunst
 exec --no-startup-id autotiling
 exec wl-paste -t text --watch clipman store --no-persist
 exec --no-startup-id nm-applet
 # necessary to get some apps to work
 exec --no-startup-id xhost si:localuser:root
-exec --no-startup-id "/usr/lib/polkit-kde-authentication-agent-1"
+# exec --no-startup-id "/usr/lib/polkit-kde-authentication-agent-1"
 exec --no-startup-id "bash ~/.config/sway/scripts/nightlight.sh"
 
 # Gaps
