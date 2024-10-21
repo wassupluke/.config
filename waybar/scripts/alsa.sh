@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # Get volume level
-volume=$(amixer get Master | grep '%' | awk -F '[][]' '{print $2}')
+volume=$(amixer get Master | grep -o '[0-9]\+%' | head -n 1 | tr -d '%')
 
-# Check if muted
-muted=$(amixer get Master | grep '%' | awk -F '[][]' '/\[off\]/{print "muted"}')
 
 # Define icons
 mute_icon="🔇"
@@ -13,13 +11,12 @@ medium_volume_icon="🔉"
 high_volume_icon="🔊"
 
 # Display icons based on volume level and mute status
-if [ "$muted" == "muted" ]; then
+if amixer get Master | grep -q '\[off\]'; then
     echo "$mute_icon"
 elif [ "$volume" -lt "35" ]; then
-    echo "$low_volume_icon $volume"
+    echo "$low_volume_icon $volume%"
 elif [ "$volume" -lt "70" ]; then
-    echo "$medium_volume_icon $volume"
+    echo "$medium_volume_icon $volume%"
 else
-    echo "$high_volume_icon $volume"
+    echo "$high_volume_icon $volume%"
 fi
-
