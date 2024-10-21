@@ -51,6 +51,7 @@ alias gs='git fetch && git status'
 alias ga='git add'
 alias gc='git commit'
 alias vim='nvim'
+alias python=python3
 alias pylint="pylint --rcfile=~/.config/.pylintrc"
 
 HISTCONTROL=ignoredups
