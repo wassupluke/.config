@@ -233,15 +233,8 @@ set $locksoff   swayidle -w  \
  bindsym $mod+Escape exec $lock
 
 # System Menu, Shutdown etc
-bindsym $mod+x exec nwg-bar -p center -a middle -i 48
+bindsym $mod+x exec ~/.config/waybar/scripts/powermenu.sh
 # Screenshot
 bindsym $mod+n exec grimshot copy area && notify-send "Screenshot copied to Clipboard"
-# Emoji
-bindsym $mod+i exec rofimoji
 # Clipboard Manager
 bindsym $mod+g exec copyq show
-
-## Password Manager
-# First list all kdbx files in ~/Sync/Pass/
-# Then open the Database using kpmenu
-bindsym $mod+p exec kpmenu --database $(find ~/Sync/Pass/ -name "*.kdbx" | rofi -dmenu -p Database) --clipboardTool wl-clipboard --menu rofi
