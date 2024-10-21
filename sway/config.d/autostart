@@ -2,7 +2,7 @@
 
 exec {
     # Clipboard Manager
-    copyq
+    # copyq
     # Notification Daemon
     mako
     # Adjust Screen Temp to reduce eye strain
