@@ -33,8 +33,8 @@ floating_modifier $mod normal
 
 bindsym {
     # show help-prompt.sh
-    $mod+slash exec alacritty --class help-prompt -T help-prompt -e help-prompt.sh
-    $mod+Shift+slash exec alacritty --class help-prompt -T help-prompt -e help-prompt.sh
+    $mod+slash exec alacritty --class help-prompt -T help-prompt -e ~/.config/my-scripts/help-prompt.sh
+    $mod+Shift+slash exec alacritty --class help-prompt -T help-prompt -e ~/.config/my-scripts/help-prompt.sh
 
     # start a terminal
     $mod+Return exec $term
