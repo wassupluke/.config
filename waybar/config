@@ -3,7 +3,7 @@
     "position": "bottom",
     "height": 15,
     "modules-left": ["custom/powermenu", "sway/mode", "sway/workspaces", "sway/window", "custom/music"],
-    "modules-center": [],
+    "modules-center": ["cpu", "temperature", "memory", "disk"],
     "modules-right": ["custom/alsa", "network", "battery", "tray", "idle_inhibitor", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
@@ -14,8 +14,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "☕️",
-            "deactivated": "🕶️"
+            "activated": " ",
+            "deactivated": "i "
         }
     },
 
@@ -35,17 +35,22 @@
         "format-alt": "{:%Y-%m-%d - %H:%M}"
     },
     "cpu": {
-        "format": "⚙️ {usage}%",
-        "on-click": "alacritty -t 'Floating Terminal' -e btop"
+        "format": "🧠  {usage}%",
+        "on-click": "alacritty -t 'Floating Terminal' -e btop",
+        "tooltip": false
     },
-
+    "temperature": {
+        "critical-threshold": 60,
+        "format": "🌡️ {temperatureC}°C",
+        "tooltip": false
+    },
     "memory": {
         "interval": 30,
-        "format": "📦️ {used}G"
+        "format": "󰘚  {used}G"
     },
 
     "battery": {
-        "states": {
+        "states": { 
             "good": 79,
             "warning": 20,
             "critical": 10
@@ -54,6 +59,11 @@
         "format-critical": "🪫 {capacity}%",
         "format-plugged": "🔌 {capacity}%",
         "format-charging": "🔌 {capacity}%"
+    },
+    "disk": {
+        "format": "📁{free}",
+        "path": "/home/",
+        "on-click": "dolphin"
     },
 
     "network": {
@@ -75,7 +85,7 @@
     },
 
     "custom/powermenu": {
-        "format": "",
+        "format": " ",
         "on-click": "exec ~/.config/waybar/scripts/powermenu.sh"
     },
 
