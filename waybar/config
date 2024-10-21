@@ -4,7 +4,7 @@
     "height": 15,
     "modules-left": ["custom/powermenu", "sway/mode", "sway/workspaces", "sway/window", "custom/music"],
     "modules-center": ["cpu", "temperature", "memory", "disk"],
-    "modules-right": ["custom/alsa", "network", "battery", "tray", "idle_inhibitor", "clock"],
+    "modules-right": ["custom/alsa", "backlight", "network", "battery", "tray", "idle_inhibitor", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -97,6 +97,13 @@
         "signal": 11,
         "interval": 1,
         "tooltip": false
+    },
+    
+    "backlight": {
+        "format": " {icon} {percent}% ",
+        "format-icons": ["🌙", "🔅", "🔆", "☀️", "🌞"],
+        "on-click": "bash ~/.config/my-scripts/nightlighttoggle.sh",
+        "tooltip-format": "click to toggle night-mode"
     },
    }
 }
