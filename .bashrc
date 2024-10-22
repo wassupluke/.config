@@ -61,4 +61,4 @@ HISTCONTROL=ignoredups
 shopt -s checkwinsize
 
 # Created by `pipx` on 2024-10-14 03:56:02
-export PATH="$PATH:/home/alyssa/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
