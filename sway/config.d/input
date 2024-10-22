@@ -1,6 +1,8 @@
 # /* vim: set filetype=conf : */
 
 input type:touchpad {
+    accel_profile flat
+    pointer_accel 0
     # Enale natural scrolling by default
     # (Inverted Scrolling)
     natural_scroll enabled
@@ -18,6 +20,12 @@ input type:touchpad {
     tap_button_map lrm
 }
 
+input type:pointer {
+    accel_profile flat
+    pointer_accel 1
+    scroll_factor 0.5
+}
+
 input * {
     # Enable the Compose Key for special characters
     # Such as ö with [ralt]+["]+o
@@ -27,12 +35,5 @@ input * {
 
     # Enable numpad by default
     xkb_numlock enabled
-
-
 }
 
-# Go GERMAN
-# input 18003:1:foostan_Corne {
-#     xkb_model "pc101"
-#     xkb_numlock enabled
-# }
