@@ -14,9 +14,9 @@ high_volume_icon="🔊"
 if amixer get Master | grep -q '\[off\]'; then
     echo "$mute_icon"
 elif [ "$volume" -lt "35" ]; then
-    echo "$low_volume_icon $volume%"
+    echo "$low_volume_icon$volume%"
 elif [ "$volume" -lt "70" ]; then
-    echo "$medium_volume_icon $volume%"
+    echo "$medium_volume_icon$volume%"
 else
-    echo "$high_volume_icon $volume%"
+    echo "$high_volume_icon$volume%"
 fi

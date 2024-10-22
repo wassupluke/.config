@@ -35,18 +35,18 @@
         "format-alt": "{:%Y-%m-%d - %H:%M}"
     },
     "cpu": {
-        "format": "🧠  {usage}%",
+        "format": "🧠{usage}%",
         "on-click": "alacritty -t 'Floating Terminal' -e btop",
         "tooltip": false
     },
     "temperature": {
         "critical-threshold": 60,
-        "format": "🌡️ {temperatureC}°C",
+        "format": "🌡️{temperatureC}°C",
         "tooltip": false
     },
     "memory": {
         "interval": 30,
-        "format": "󰘚  {used}G"
+        "format": "󰘚 {used}G"
     },
 
     "battery": {
@@ -55,10 +55,10 @@
             "warning": 20,
             "critical": 10
         },
-        "format": "🔋 {capacity}% {time}",
-        "format-critical": "🪫 {capacity}%",
-        "format-plugged": "🔌 {capacity}%",
-        "format-charging": "🔌 {capacity}%"
+        "format": "🔋{capacity}% {time}",
+        "format-critical": "🪫{capacity}%",
+        "format-plugged": "🔌{capacity}%",
+        "format-charging": "🔌{capacity}%"
     },
     "disk": {
         "format": "📁{free}",
@@ -67,7 +67,7 @@
     },
 
     "network": {
-        "format-wifi": "🛜 {essid} : {signalStrength}%",
+        "format-wifi": "🛜{essid}:{signalStrength}%",
         "format-ethernet": "{ifname}",
         "format-disconnected": "Disconnected",
         "on-click": "alacritty -e 'nmtui'"
@@ -86,11 +86,11 @@
 
     "custom/powermenu": {
         "format": " ",
-        "on-click": "exec ~/.config/waybar/scripts/powermenu.sh"
+        "on-click": "exec ~/.config/my-scripts/powermenu.sh"
     },
 
     "custom/alsa": {
-        "exec": "~/.config/waybar/scripts/alsa.sh",
+        "exec": "~/.config/my-scripts/alsa.sh",
         "on-click": "amixer set Master toggle",
         "on-scroll-down": "amixer set Master 2%+",
         "on-scroll-up": "amixer set Master 2%-",
@@ -100,7 +100,7 @@
     },
     
     "backlight": {
-        "format": " {icon} {percent}% ",
+        "format": " {icon}{percent}% ",
         "format-icons": ["🌙", "🔅", "🔆", "☀️", "🌞"],
         "on-click": "bash ~/.config/my-scripts/nightlighttoggle.sh",
         "tooltip-format": "click to toggle night-mode"

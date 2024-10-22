@@ -240,6 +240,6 @@ set $locksoff   swayidle -w  \
  bindsym $mod+Escape exec $lock
 
 # System Menu, Shutdown etc
-bindsym $mod+x exec ~/.config/waybar/scripts/powermenu.sh
+bindsym $mod+x exec ~/.config/my-scripts/powermenu.sh
 # Clipboard Manager
 bindsym $mod+g exec copyq show

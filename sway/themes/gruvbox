@@ -1,4 +1,4 @@
-
+font pango:Iosevka Nerd Font 10
 output * bg ../walls/2.jpg stretch
 
 
