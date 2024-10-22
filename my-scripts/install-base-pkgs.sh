@@ -8,7 +8,6 @@
 && sudo apt update \
 && sudo apt install gh curl sway swaybg swayidle swaylock xdg-desktop-portal-wlr xwayland waybar brightnessctl feh rofi mako-notifier grimshot neovim network-manager-gnome ntpdate alacritty playerctl fonts-font-awesome neofetch btop copyq python3 pipx wget wlsunset -y \
 && pipx install autotiling \
-&& pipx ensurepath \
 && eval "$(register-python-argcomplete pipx)" \
 \
 \
