@@ -6,14 +6,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" -----------------------------------------------------------------------
 " Plugins
 " Vim-Plug Plugin Manager
 call plug#begin('~/.vim/plugged')
 
-
 " File Tree
 Plug 'preservim/nerdtree'
-
 " FZF File Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -25,12 +24,22 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 " Git hunk status in the gutter
 Plug 'airblade/vim-gitgutter'
-" Allow viewing of Hex colors in the buffer [ #fff ] 
+" Allow viewing of Hex colors in the buffer [ #fff ]
 Plug 'norcalli/nvim-colorizer.lua'
-
+Plug 'dense-analysis/ale' " async linting
 
 call plug#end()
+" -----------------------------------------------------------------------
+"
+" -----------------------------------------------------------------------
+" Ale
 
+let g:ale_linters = {'python': ['flake8', 'pydocstyle', 'bandit', 'mypy']}
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'python': ['black', 'isort']}
+let g:ale_fix_on_save = 1
+
+" -----------------------------------------------------------------------
+"
 " Native Config
 " -------------
 
@@ -107,7 +116,7 @@ map ; :Files<CR>
 " [ Control + n ] - Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" [ Control + c ] - Copy Visual Selection to wl-copy 
+" [ Control + c ] - Copy Visual Selection to wl-copy
 vmap <C-c> y:call system("wl-copy", getreg("\""))<CR>
 
 " Switch between windows with [ Control + h|j|k|l ]
