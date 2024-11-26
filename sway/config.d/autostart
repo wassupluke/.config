@@ -6,8 +6,11 @@ exec {
     # Notification Daemon
     mako
     # Adjust Screen Temp to reduce eye strain
-    # Configured with Lat:Long
-    gammastep -l 47.5:7.4
+    # GammaStep provides a smooth color transition
+    # and is configured with Lat:Long
+    #gammastep -l 47.5:7.4
+    # or use wlsunset with this script to get the lat:long
+    bash ~/.config/sway/scripts/nightlight.sh
     # Authenticator
     /usr/lib/polkit-1/polkit-agent-helper-1
 }
