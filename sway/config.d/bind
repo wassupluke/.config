@@ -21,7 +21,7 @@ set $browser firefox
 set $explorer dolphin
 
 # Application Launcher
-set $menu rofi -show run | xargs swaymsg exec -- 
+set $menu rofi -show run | xargs swaymsg exec --
 
 
 # Drag floating windows by holding down $mod and left mouse button.
@@ -60,7 +60,7 @@ bindsym {
 
     # Alt + Tab
     mod1+Tab workspace back_and_forth
-    
+
     # Screenshot all visible outputs to clipboard and Pictures
     Print exec grimshot copy screen && grimshot save screen
     # Screenshot only active window to clipboard and Pictures
@@ -171,18 +171,6 @@ bindsym {
 }
 
 
-
-# Application - Workspace Assignments
-assign [app_id="firefox-esr"] workspace 2
-assign [class="Spotify"] workspace 10
-
-
-
-# Application - Floating Assignments
-for_window [title="help-prompt"] floating enable
-for_window [title="help-prompt"] resize set 870 650
-
-
 #
 # Resize Mode
 #
@@ -224,7 +212,7 @@ bindsym --locked {
     XF86AudioPrev        exec playerctl previous
 
     XF86MonBrightnessDown exec --no-startup-id brightnessctl set -e -q 4%-
-    XF86MonBrightnessUp exec --no-startup-id brightnessctl set -e -q 4%+ 
+    XF86MonBrightnessUp exec --no-startup-id brightnessctl set -e -q 4%+
 }
 
 # Lock to black
@@ -235,7 +223,7 @@ set $locksoff   swayidle -w  \
                 timeout 1 '$lock' \
                 timeout 2 'swaymsg "output * dpms off"' \
                 resume 'swaymsg "output * dpms on"; pkill -nx swayidle'
- 
+
  # Lock computer
  bindsym $mod+Escape exec $lock
 
