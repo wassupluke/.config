@@ -34,8 +34,8 @@ call plug#end()
 " -----------------------------------------------------------------------
 " Ale
 
-let g:ale_linters = {'python': ['flake8', 'pydocstyle', 'bandit', 'mypy'], 'markdown': ['markdownlint']}
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'python': ['black', 'isort'], 'markdown': ['prettier', 'remark-lint']}
+let g:ale_linters = {'css': ['csslint', 'vscodecss'], 'html': ['angular', 'htmlhint', 'tidy', 'vscodehtml'], 'python': ['flake8', 'pydocstyle', 'bandit', 'mypy'], 'markdown': ['markdownlint']}
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'css': ['css-beautify', 'prettier'], 'html': ['html-beautify', 'prettier', 'tidy'], 'python': ['black', 'isort'], 'markdown': ['prettier', 'remark-lint']}
 let g:ale_fix_on_save = 1
 
 " -----------------------------------------------------------------------
@@ -66,6 +66,8 @@ set autoindent
 " (╯°□°）╯︵ ┻━┻
 set termguicolors
 
+" Enable copying
+set clipboard=unnamedplus
 
 " Spell Checking
 " --------------
