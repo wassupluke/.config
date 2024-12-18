@@ -34,8 +34,8 @@ call plug#end()
 " -----------------------------------------------------------------------
 " Ale
 
-let g:ale_linters = {'python': ['flake8', 'pydocstyle', 'bandit', 'mypy']}
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'python': ['black', 'isort']}
+let g:ale_linters = {'python': ['flake8', 'pydocstyle', 'bandit', 'mypy'], 'markdown': ['markdownlint']}
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'python': ['black', 'isort'], 'markdown': ['prettier', 'remark-lint']}
 let g:ale_fix_on_save = 1
 
 " -----------------------------------------------------------------------
