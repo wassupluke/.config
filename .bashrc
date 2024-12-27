@@ -50,7 +50,7 @@ alias magic='cd ~/code/uniform-bank-CSV && source .venv/bin/activate && python3 
 alias mkdir='mkdir -pv'
 alias gs='git fetch && git status'
 alias ga='git add'
-alias gc='git commit'
+alias gc='git commit -m '
 alias vim='nvim'
 alias python=python3
 alias pylint="pylint --rcfile=~/.config/.pylintrc"
