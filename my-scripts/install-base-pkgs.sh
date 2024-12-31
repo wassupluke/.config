@@ -6,10 +6,10 @@
 \
 \
 && sudo apt update \
-&& sudo apt install curl blueman libspa-0.2-bluetooth gammastep gh sway swaybg swayidle swaylock xdg-desktop-portal-wlr xwayland waybar brightnessctl feh rofi mako-notifier grimshot neovim network-manager-gnome ntpdate alacritty playerctl fonts-font-awesome fonts-noto-color-emoji fonts-clear-sans neofetch btop copyq python3 pipx wget wlsunset tree -y \
+&& sudo apt install alacritty blueman brightnessctl btop copyq curl feh fonts-clear-sans fonts-font-awesome fonts-noto-color-emoji gammastep gh gparted grimshot libspa-0.2-bluetooth mako-notifier neofetch neovim network-manager-gnome ntpdate pipx playerctl python3 rofi sway swaybg swayidle swaylock tree waybar wget wlsunset xdg-desktop-portal-wlr xwayland -y \
 \
 \
-&& pipx_pkgs=("autotiling" "flake8" "pydocstyle" "bandit" "mypy" "black" "isort") \
+&& pipx_pkgs=("autotiling" "bandit" "black" "flake8" "isort" "mypy" "pydocstyle") \
 && for pkg in "${pipx_pkgs[@]}"; do
 pipx install "$pkg"
 done \
