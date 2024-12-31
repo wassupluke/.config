@@ -13,6 +13,8 @@ exec {
     bash ~/.config/sway/scripts/nightlight.sh
     # Authenticator
     /usr/lib/polkit-1/polkit-agent-helper-1
+
+    xhost +localhost
 }
 
 exec_always {
