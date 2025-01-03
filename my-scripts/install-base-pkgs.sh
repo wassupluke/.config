@@ -6,7 +6,7 @@
 \
 \
 && sudo apt update \
-&& sudo apt install alacritty blueman brightnessctl btop copyq curl feh fonts-clear-sans fonts-font-awesome fonts-noto-color-emoji gammastep gh gparted grimshot libspa-0.2-bluetooth mako-notifier neofetch neovim network-manager-gnome ntpdate pipx playerctl python3 rofi sway swaybg swayidle swaylock tree waybar wget wlsunset xdg-desktop-portal-wlr xwayland -y \
+&& sudo apt install alacritty blueman brightnessctl btop copyq curl feh fonts-clear-sans fonts-font-awesome fonts-noto-color-emoji gammastep gh gparted grimshot htop libspa-0.2-bluetooth mako-notifier neofetch neovim network-manager-gnome ntpdate pipx playerctl python3 rofi sway swaybg swayidle swaylock tree waybar wget wlsunset xdg-desktop-portal-wlr xwayland -y \
 \
 \
 && pipx_pkgs=("autotiling" "bandit" "black" "flake8" "isort" "mypy" "pydocstyle") \
