@@ -27,10 +27,13 @@ Plug 'airblade/vim-gitgutter'
 " Allow viewing of Hex colors in the buffer [ #fff ]
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'dense-analysis/ale' " async linting
+Plug 'gabrielelana/vim-markdown'
+Plug 'williamboman/mason.nvim'
 
 call plug#end()
 " -----------------------------------------------------------------------
 "
+lua require("mason").setup()
 " -----------------------------------------------------------------------
 " Ale
 
