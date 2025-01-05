@@ -1,4 +1,4 @@
-
+vim.cmd([[
 " Install Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -29,11 +29,15 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'dense-analysis/ale' " async linting
 Plug 'gabrielelana/vim-markdown'
 Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 " -----------------------------------------------------------------------
 "
 lua require("mason").setup()
+lua require("mason-lspconfig").setup()
+
 " -----------------------------------------------------------------------
 " Ale
 
@@ -136,3 +140,4 @@ nnoremap <silent> <C-d> <C-d>zz
 
 " Colorscheme
 colorscheme gruvbox
+]])
