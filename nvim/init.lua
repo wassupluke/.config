@@ -16,6 +16,7 @@ Plug 'preservim/nerdtree'
 " FZF File Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'wakatime/vim-wakatime'
 " Visuals
 " ---
 " Improved status line
