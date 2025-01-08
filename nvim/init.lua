@@ -52,6 +52,7 @@ let g:ale_fix_on_save = 1
 " -------------
 
 syntax on
+filetype plugin on
 
 set mouse=a
 
