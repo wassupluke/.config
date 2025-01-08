@@ -97,8 +97,8 @@
     "custom/alsa": {
         "exec": "~/.config/my-scripts/alsa.sh",
         "on-click": "amixer set Master toggle",
-        "on-scroll-down": "amixer set Master 2%+",
-        "on-scroll-up": "amixer set Master 2%-",
+        "on-scroll-down": "amixer set Master 2%-",
+        "on-scroll-up": "amixer set Master 2%+",
         "signal": 11,
         "interval": 1,
         "tooltip": false
