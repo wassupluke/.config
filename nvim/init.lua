@@ -131,10 +131,10 @@ map <C-n> :NERDTreeToggle<CR>
 vmap <C-c> y:call system("wl-copy", getreg("\""))<CR>
 
 " Switch between windows with [ Control + h|j|k|l ]
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
 
 " Centered half page up / down
 nnoremap <silent> <C-u> <C-u>zz
