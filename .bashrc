@@ -51,6 +51,7 @@ alias mkdir='mkdir -pv'
 alias gs='git fetch && git status'
 alias ga='git add'
 alias gc='git commit -m '
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an> %Creset' --abbrev-commit"
 alias vim='nvim'
 alias python=python3
 alias pylint="pylint --rcfile=~/.config/.pylintrc"
