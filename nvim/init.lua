@@ -15,19 +15,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'wakatime/vim-wakatime'
-Plug 'itchyny/lightline.vim'
-Plug 'morhetz/gruvbox'
 Plug 'airblade/vim-gitgutter'
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'dense-analysis/ale' " async linting
 Plug 'gabrielelana/vim-markdown'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'morhetz/gruvbox'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neovim/nvim-lspconfig'
+Plug 'preservim/nerdtree'
+Plug 'wakatime/vim-wakatime'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'williamboman/mason.nvim'
 Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
@@ -92,9 +92,18 @@ set clipboard=unnamedplus
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
 
+
 "
 " -----------------------------------------------------------------------
 " Plugin Variables
+
+
+"
+" ---------
+" AutoComplPop
+
+" Tab completes menu item from AutoComplPop like CTRL+y would
+inoremap <expr> <Tab> pumvisible() ? "<C-y>" : "<Tab>"
 
 "
 " ---------
