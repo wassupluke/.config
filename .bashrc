@@ -38,7 +38,7 @@ set -o vi
 
 alias c='clear'
 alias r='fc -s'
-alias t=tree
+alias t="tree | less"
 alias rr='fc -s -2'
 alias h=history
 alias cd..='cd ..'
