@@ -1,159 +1,114 @@
-[{
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 25,
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["sway/workspaces"],
-    "modules-center": ["battery", "network"],
-    "modules-right": ["clock", "custom/powermenu"],
-
-    // Top modules configuration
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 15,
+    "modules-left": ["custom/powermenu", "custom/updates", "sway/mode", "sway/workspaces", "sway/window", "custom/music"],
+    "modules-center": ["cpu", "temperature", "memory", "disk"],
+    "modules-right": ["custom/alsa", "backlight", "network", "battery", "tray", "idle_inhibitor", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{index}:{icon}",
+        "format": "{name}"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "󰖟",
-            "7": "󰍳",
-            "9": "",
-            "10": "",
-            "default": "󰍹",
-            "urgent": "",
+            "activated": " ",
+            "deactivated": "i "
         }
+    },
+
+    "custom/updates": {
+        "format": "📥   ",
+        "on-click": "alacritty --class updater -T updater -e ~/.config/my-scripts/updates.sh"
+    },
+
+    "sway/mode": {
+        "format": "{}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 7
+    },
+
+    "clock": {
+        // Human Friendly
+        "format": "{:%A, %B %d at %I:%M %p}",
+        // 24hr Robot Friendly
+        "format-alt": "{:%Y-%m-%d - %H:%M}"
+    },
+    "cpu": {
+        "format": "🧠{usage}%",
+        "on-click": "alacritty -t 'Floating Terminal' -e btop",
+        "tooltip": false
+    },
+    "temperature": {
+        "critical-threshold": 60,
+        "format": "🌡️{temperatureC}°C",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 30,
+        "format": "󰘚 {used}G"
     },
 
     "battery": {
         "states": {
             "good": 79,
             "warning": 20,
-            "critical": 15
+            "critical": 10
         },
-        "format": "{icon} {capacity}%  {time}",
-        "format-charging": "󱐥 {capacity}%",
-        "format-plugged": "󱐥 {capacity}%",
-        "format-alt": "{icon} {capacity}%",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format": "🔋{capacity}% {time}",
+        "format-critical": "🪫{capacity}%",
+        "format-plugged": "🔌{capacity}%",
+        "format-charging": "🔌{capacity}%"
+    },
+    "disk": {
+        "format": "📁{free}",
+        "path": "/home/",
+        "on-click": "dolphin"
     },
 
     "network": {
-    "format-wifi": "  {essid}  ",
-    "format-ethernet": "{ifname}    ",
-    "format-ethernet": "{ifname}    ",
-    "format-disconnected": "   ",
-    "max-length": 50,
-    "on-click": "alacritty -e 'nmtui'"
+        "format-wifi": "🛜{essid}:{signalStrength}%",
+        "format-ethernet": "{ifname}",
+        "format-disconnected": "Disconnected",
+        "on-click": "alacritty -e 'nmtui'"
     },
 
-    "network#2": {
-    "interface": "enp6s0",
-    "format": "{ifname}  ",
-    "format-ethernet": "{ipaddr}/{cidr}    ",
-    "format-disconnected": "", //An empty format will hide the module.
-    "max-length": 50
-    },
-
-    "clock": {
-        "format": "   {:%a %d %b, %I:%M %p} "
+    "custom/music": {
+        "format": "{}",
+        "max-length": 20,
+        "interval": 5,
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null",
+        "tooltip": false,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl previous",
+        "on-scroll-down": "playerctl next"
     },
 
     "custom/powermenu": {
-    	"format": " 󰐥 ",
-	"on-click": "exec ~/.config/waybar/scripts/powermenu.sh",
-
-    },
-},
-
-{
-    "layer": "bottom", 
-    "position": "bottom",
-    "height": 25,
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["tray", "idle_inhibitor", "custom/updates", "mpris"],
-    "modules-center": ["cpu", "temperature", "memory", "disk"],
-    "modules-right": ["pulseaudio", "backlight"],
-
-    // Bottom modules configuration
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 2
+        "format": " ",
+        "on-click": "exec ~/.config/my-scripts/powermenu.sh"
     },
 
-    "idle_inhibitor": {
-	"format": "{icon}",
-	"format-icons": {
-	    "activated": "",
-	    "deactivated": "󰛊"
-	}
-    },
-
-    "custom/updates": {
-    	"format": "{} ",
-	"exec": "~/.config/waybar/scripts/updates.sh"
-    },
-
-    "mpris": {
-	"format": "{player_icon} {title}",
-	"format-paused": "{status_icon} {title}",
-	"player-icons": {
-                "default": "",
-                "spotifyd": "",
-                "spotify": ""
-	},
-	"status-icons": {
-                "paused": ""
-	},
-	"ignored-players": ["firefox"]
-    },
-
-    "cpu": {
-        "format": " {usage}%  ",
+    "custom/alsa": {
+        "exec": "~/.config/my-scripts/alsa.sh",
+        "on-click": "amixer set Master toggle",
+        "on-scroll-down": "amixer set Master 2%-",
+        "on-scroll-up": "amixer set Master 2%+",
+        "signal": 11,
+        "interval": 1,
         "tooltip": false
-    },
-
-    "temperature": {
-        "critical-threshold": 50,
-        "format": " {temperatureC}°C  ",
-        "tooltip": false
-    },
-
-    "memory": {
-        "format": "󰘚 {used}GiB  ",
-        "tooltip": false
-    },
-
-    "disk": {
-    	"format": "  {free}",
-        "path": "/home/"
-    },
-
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": " {icon} {volume}% {format_source}",
-        "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "   {format_source} ",
-        "format-source": " {volume} % ",
-        "format-source-muted": " ",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
     },
 
     "backlight": {
-        // "device": "acpi_video1",
-        "format": " {icon} {percent}% ",
-        "format-icons": ["", "", "", "", ""],
-	"on-click": "bash ~/.config/sway/scripts/nightlighttoggle.sh",
-	"tooltip-format": "click to toggle night-mode"
+        "format": " {icon}{percent}% ",
+        "format-icons": ["🌙", "🔅", "🔆", "☀️", "🌞"],
+        "on-click": "bash ~/.config/my-scripts/nightlighttoggle.sh",
+        "tooltip-format": "click to toggle night-mode"
     },
-}]
+   }
+}

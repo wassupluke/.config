@@ -1,52 +1,60 @@
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  /* font-family: "Noto Sans", "Font Awesome"; */
-  font-family: "Iosevka Nerd Font";
-  font-size: 13px;
-  min-height: 0;
-  font-weight: normal;
-}
-
-.modules-right, .modules-left, .modules-center {
-  margin: 4px;
-}
-
-.modules-right > * > *, .modules-left > * > * {
-  background-color: #E42022;
-  border-radius: 2px;
-}
-
-.modules-right > * > *, .modules-left {
-  color: black;
-}
-
-.modules-center {
-  background-color: rgba(0,0,0,0);
-}
-
-#tray {
-  padding: 0 2px 0 2px;
-  background-color: #E42022;
-}
-
-#idle_inhibitor {
-  padding: 0 6px 0 3px;
+    border: none;
+    border-radius: 0px;
+    font-family: "Clear Sans";
+    font-size: 12pt;
+    min-height: 0;
+    color: #ebdbb2;
 }
 
 window#waybar {
-  background-color: rgba(9, 9, 9, 0.88);
-  /*background-color: #090909,0.5;*/
-  color: gainsboro;
-  font-weight: bold;
+    background: #1d2021;
 }
 
-#battery {
+#window {
+    padding: 0px 5px;
+    font-size:0.8em;
+}
+
+#workspaces, #clock, #custom-music, #window { 
+    font-weight: 800;
+}
+
+#tray * {
+    color: #1d2021;
+}
+
+/* Workspace Buttons */
+#workspaces button {
+    min-width: 33px;
+}
+#workspaces button label {
+    color: #5B9EA6;
+}
+#workspaces button.focused label {
+    color: #1d2021;
+}
+#workspaces button.focused {
+    background: #5B9EA6; 
+}
+
+#workspaces button.urgent {
+    background: #F29441;
+}
+
+#mode {
+    background-color: #fd472f;
+    color: white;
+}
+
+#clock, #battery, #cpu, #temperature, #memory, #network, #pulseaudio, #tray, #mode, #idle_inhibitor {
     padding: 0 5px;
     margin: 0 5px;
 }
 
 #battery.charging {
-    border-radius: 2px;
+    color: #b8bb26;
+    border-radius: 88px;
     animation-name: charging;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -56,14 +64,14 @@ window#waybar {
 
 @keyframes charging {
     to {
-        color: lime;
+        color: white;
     }
 }
 
 /* Flash green when charged above "good" */
 #battery:not(.critical):not(.warning):not(.good).charging {
-    background-color: lime;
-    border-radius: 2px;
+    background-color: #98971a;
+    border-radius: 88px;
     animation-name: blink;
     animation-duration: 1s;
     animation-timing-function: steps(9);
@@ -72,65 +80,58 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-    background-color: yellow;
+    background-color: #fabd2f;
+    border-radius: 88px;
     animation-name: blink;
     animation-duration: 1s;
-    animation-timing-function: steps(6);
+    animation-timing-function: steps(9);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #E42022;
+    background-color: #fb4934;
+    border-radius: 88px;
     animation-name: blink;
     animation-duration: 1s;
-    animation-timing-function: steps(6);
+    animation-timing-function: steps(9);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
 @keyframes blink {
     to {
-        background-color: rgba(0,0,0,0);
-        border-radius: 2px;
+        background-color: #1d2021;
+        border-radius: 88px;
+        color: white;
     }
 }
 
-#temperature.critical {
-  background-color: #E42022;
+#idle_inhibitor.activated {
+    background-color: #689d6a;
+    color: #1d2021;
 }
 
-#window {
-  background-color: #191919;
+#custom-music {
+    color: #fabd2f;
+    font-size:0.8em;
+    padding: 0 20px;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
+#custom-worktime {
+    padding: 0 5px;
 }
 
-#workspaces button {
-  border-radius: 2px;
+#custom-powermenu {
+    padding: 0 16px 0 16px;
 }
 
-#workspaces button.focused, #workspaces button.active {
-  background-color: lightgray;
-  color: #191919;
+#clock {
+    margin: 0;
+    color: #fabd2f;
 }
 
-#workspaces button.urgent {
-    background-color: limegreen;
-}
 
-#custom-updates {
-    background-color: #E42022;
-}
-
-#mpris {
-  padding: 0 4px 0 4px;
-  border-radius: 2px;
-}
-
-#mpris.spotifyd, #mpris.spotify {
-  background-color: #1DB954;
-  color: #191414;
+#network.disconnected {
+    color: #fd472f;
 }

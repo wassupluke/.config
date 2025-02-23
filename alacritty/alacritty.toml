@@ -11,3 +11,6 @@ save_to_clipboard = true
 
 [window]
 opacity = 0.9
+
+[font]
+size = 16.0

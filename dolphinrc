@@ -1,34 +1,11 @@
-[$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
-
-[ContentDisplay]
-UsePermissionsFormat=CombinedFormat
-
-[ContextMenu]
-ShowCopyMoveMenu=true
-
 [General]
-AutoExpandFolders=true
-EditableUrl=true
-ShowFullPath=true
-ShowFullPathInTitlebar=true
 Version=202
-ViewPropsTimestamp=2023,11,5,23,27,15.288
+ViewPropsTimestamp=2024,4,17,16,48,3.6029999999999998
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
-[KPropertiesDialog]
-1366x768 screen: Height=443
-1366x768 screen: Width=448
-
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled
-
-[PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
-
-[Search]
-Location=Everywhere

@@ -6,13 +6,23 @@
 \
 \
 && sudo apt update \
-&& sudo apt install curl gammastep gh sway swaybg swayidle swaylock xdg-desktop-portal-wlr xwayland waybar brightnessctl feh rofi mako-notifier grimshot neovim network-manager-gnome ntpdate alacritty playerctl fonts-font-awesome fonts-noto-color-emoji fonts-clear-sans neofetch btop copyq python3 pipx wget wlsunset -y \
-&& pipx install autotiling \
+&& sudo apt install alacritty blueman brightnessctl btop cargo curl feh fonts-clear-sans fonts-font-awesome fonts-noto-color-emoji gammastep gh gparted grimshot htop libspa-0.2-bluetooth luarocks mako-notifier neofetch neovim network-manager-gnome npm ntpdate openssh-client openssh-server pipx playerctl python3 rofi sway swaybg swayidle swaylock tree waybar wget wl-clipboard wlsunset xdg-desktop-portal-wlr xwayland -y \
+\
+\
+&& pipx_pkgs=("autotiling" "bandit" "black" "flake8" "isort" "mypy" "pydocstyle") \
+&& for pkg in "${pipx_pkgs[@]}"; do
+pipx install "$pkg"
+done \
 && eval "$(register-python-argcomplete pipx)" \
 \
 \
 && sudo ntpdate pool.ntp.org \
 && sudo hwclock --systohc --utc \
+\
+\
+&& rm ~/.bashrc ~/.bash_profile \
+; ln ~/.config/.bashrc ~/.bashrc \
+&& ln ~/.config/.bash_profile ~/.bash_profile \
 \
 \
 && curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \

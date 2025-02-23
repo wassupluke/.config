@@ -1,0 +1,36 @@
+# /* vim: set filetype=conf : */
+
+exec {
+    # Clipboard Manager
+    # copyq
+    # Notification Daemon
+    mako
+    # Adjust Screen Temp to reduce eye strain
+    # GammaStep provides a smooth color transition
+    # and is configured with Lat:Long
+    #gammastep -l 47.5:7.4
+    # or use wlsunset with this script to get the lat:long
+    bash ~/.config/sway/scripts/nightlight.sh
+    # Authenticator
+    /usr/lib/polkit-1/polkit-agent-helper-1
+
+    xhost +localhost
+}
+
+exec_always {
+    # Autotiling
+    pipx run autotiling
+}
+
+
+# Sway Idle
+exec swayidle -w \
+         timeout 180 swaylock \
+         timeout 360 'swaymsg "output * power off"' \
+              resume 'swaymsg "output * power on"' \
+         before-sleep 'playerctl pause' \
+         before-sleep swaylock
+
+
+# Screen share
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
