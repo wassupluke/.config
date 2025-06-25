@@ -1,0 +1,18 @@
+[global]
+keyboard = "en-us"
+country = "us"
+fqdn = "pveauto.lan"
+mailto = "wassupluke@gmail.com"
+timezone = "America/Chicago"
+root-password = "1234"
+reboot-on-error = "false"
+
+[network]
+source = "from-dhcp"
+
+[disk-setup]
+filesystem = "ext4"
+
+[first-boot]
+source = "from-iso"
+ordering = "before-network"
